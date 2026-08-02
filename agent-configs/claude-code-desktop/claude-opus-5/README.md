@@ -1,6 +1,6 @@
 # Global Claude Code Agent Rules
 
-This folder contains a global `CLAUDE.md` system configuration that defines behavioral guidelines, safety guardrails, MCP tool usage, and execution defaults for Claude Code across all projects.
+This folder contains a `CLAUDE.md` system configuration that defines behavioral guidelines, safety guardrails, MCP tool usage, and execution defaults for Claude Code specifically for Claude Opus 5.
 
 ## Description
 
@@ -18,7 +18,7 @@ Based on the official [Claude Code Documentation](https://code.claude.com/docs/e
 
 *   **Project Root (`./CLAUDE.md`)**
     *   **Effect:** Applies to anyone working in the repository when committed to Git (overrides global rules).
-    *   **Use Case:** Build/test commands, repository coding standards, and architectural conventions.
+    *   **Use Case:** Shaping Claude Opus 5's behavior when you are working on this project, Build/test commands, repository coding standards and architectural conventions.
 
 *   **Personal Local Notes (`./CLAUDE.local.md`)**
     *   **Effect:** Applies only to your local machine for a specific project (ignored by Git via `.gitignore`).
