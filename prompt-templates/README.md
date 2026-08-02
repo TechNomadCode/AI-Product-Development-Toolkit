@@ -18,7 +18,7 @@ What makes these prompts unique is their **user-centered, guided conversational 
 *   [ux-user-flow](./ux-user-flow/): Template for translating PRDs into detailed UX Specifications.
 *   [mvp-concept-definition](./mvp-concept-definition/): Template for defining focused MVP scope, hypotheses, and features.
 *   [mvp-development-planning](./mvp-development-planning/): Template for developing detailed MVP development plans based on the concept.
-*   [ultra-lean-mvp-development-planning](./ultra-lean-mvp-development-planning/): Template focused on rapidly defining core MVP build specifications.
+*   [ultra-lean-mvp-development-planning](./ultra-lean-mvp-development-planning/): Template for developing detailed Ultra Lean MVP development plans based on the concept
 *   [test-plan-generation](./test-plan-generation/): Template for creating thorough test plans for software quality assurance.
 *   [v0-design-prompts](./v0-design-prompts/): Templates for generating `v0.dev` prompts based on UX Specs and MVP scope.
 *   [session-continuation](./session-continuation/): Meta-prompt for distilling long chat sessions into continuation plans.
