@@ -1,4 +1,4 @@
-# AI Product Development Toolkit 🧠 [PromptQuick.ai](https://promptquick.ai)
+# AI Product Development Toolkit [PromptQuick.ai](https://promptquick.ai)
 
 Welcome to my personal collection of product development prompt templates and AI agent configurations! This repository serves as a central place to store, organize, and share tools for AI-driven software development, guiding projects from initial idea to working MVP.
 
