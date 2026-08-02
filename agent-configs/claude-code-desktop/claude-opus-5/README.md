@@ -26,7 +26,7 @@ Based on the official [Claude Code Documentation](https://code.claude.com/docs/e
 
 *   **Subdirectories (`./subfolder/CLAUDE.md`)**
     *   **Effect:** Applies specifically when Claude reads or modifies files within that subfolder.
-    *   **Use Case:** Monorepos or directory-specific rules (e.g., frontend vs. backend conventions).
+    *   **Use Case:** Shaping Claude Opus 5's behavior when you use it for specific specs, Monorepos or directory-specific rules (e.g., frontend vs. backend conventions).
 
 ## Key Features
 
