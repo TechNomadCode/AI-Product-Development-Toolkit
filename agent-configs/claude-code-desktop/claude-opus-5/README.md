@@ -12,7 +12,7 @@ This `CLAUDE.md` file acts as the universal system prompt for Claude Code. It en
 
 Based on the official [Claude Code Documentation](https://code.claude.com/docs/en/best-practices#write-an-effective-claude-md), where you place the `CLAUDE.md` file determines its scope and effect across your sessions:
 
-*   **Global Setup (`~/.claude/CLAUDE.md`)**
+*   **Global Setup (`~/.claude/CLAUDE.md`) WARNING, DO NOT PLACE MY CONFIG HERE IF YOU ARE USING OTHER MODELS AS THIS IS SPECIFICALLY MADE FOR OPUS 5**
     *   **Effect:** Applies automatically to **all** Claude Code sessions on your computer across every project.
     *   **Use Case:** Personal behavioral rules, safety guardrails, and default tool settings.
 
