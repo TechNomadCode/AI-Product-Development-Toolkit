@@ -1,6 +1,6 @@
 # AI Product Development Toolkit [PromptQuick.ai](https://promptquick.ai)
 
-Welcome to my personal collection of product development prompt templates and AI agent configurations! This repository serves as a central place to store, organize, and share tools for AI-driven software development, guiding projects from initial idea to working MVP.
+Welcome to my personal collection of prompt templates, AI agent configurations and more. This repository serves as a central place to store, organize, and share tools for AI-driven software development, guiding projects from initial idea to working MVP.
 
 ## About This Repository
 
@@ -8,6 +8,7 @@ This repository is organized into two primary sections:
 
 *   **Prompt Templates (`prompt-templates/`):** Interactive conversational prompts for product planning, specs, UX flows, and task generation.
 *   **Agent Configurations (`agent-configs/`):** Behavioral rules, system instructions, and configuration files for AI coding assistants like Claude Code and Cursor.
+*   **Game Dev Pipeline (3D Assets) (`3D-asset-pipeline-game-dev/`):** Hybrid 3D game asset development pipeline designed for creators with **zero manual Blender experience**.
 
 ## High-Level Workflow
 
@@ -16,6 +17,8 @@ The toolkit supports an end-to-end development process:
 1.  **Product Planning:** Define PRDs, UX flows, MVP concepts, and more using templates in [`prompt-templates/`](./prompt-templates/).
 2.  **Agent Execution:** Configure your coding assistant using files found in [`agent-configs/`](./agent-configs/).
 3.  **State Management:** Distill long chat sessions into continuation plans when context windows get full.
+4.  **3D Assets:** Set up a 3D game asset development pipeline with AI. [`3D-asset-pipeline-game-dev/`](./3D-asset-pipeline-game-dev/).
+
 
 ## Repository Structure
 
