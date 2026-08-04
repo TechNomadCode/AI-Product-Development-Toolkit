@@ -1,6 +1,6 @@
 # Global Claude Code Agent Rules
 
-This folder contains a global `CLAUDE.md` system configuration that defines behavioral guidelines, safety guardrails, MCP tool usage, and execution defaults for Claude Code across all projects.
+This folder contains a `CLAUDE.md` system configuration that defines behavioral guidelines, safety guardrails, MCP tool usage, and execution defaults for Claude Code specifically for Claude Opus 5.
 
 ## Description
 
@@ -12,13 +12,13 @@ This `CLAUDE.md` file acts as the universal system prompt for Claude Code. It en
 
 Based on the official [Claude Code Documentation](https://code.claude.com/docs/en/best-practices#write-an-effective-claude-md), where you place the `CLAUDE.md` file determines its scope and effect across your sessions:
 
-*   **Global Setup (`~/.claude/CLAUDE.md`)**
+*   **Global Setup (`~/.claude/CLAUDE.md`) WARNING, DO NOT PLACE MY CONFIG HERE IF YOU ARE USING OTHER MODELS AS THIS IS SPECIFICALLY MADE FOR OPUS 5**
     *   **Effect:** Applies automatically to **all** Claude Code sessions on your computer across every project.
     *   **Use Case:** Personal behavioral rules, safety guardrails, and default tool settings.
 
 *   **Project Root (`./CLAUDE.md`)**
     *   **Effect:** Applies to anyone working in the repository when committed to Git (overrides global rules).
-    *   **Use Case:** Build/test commands, repository coding standards, and architectural conventions.
+    *   **Use Case:** Shaping Claude Opus 5's behavior when you are working on this project, Build/test commands, repository coding standards and architectural conventions.
 
 *   **Personal Local Notes (`./CLAUDE.local.md`)**
     *   **Effect:** Applies only to your local machine for a specific project (ignored by Git via `.gitignore`).
@@ -26,7 +26,7 @@ Based on the official [Claude Code Documentation](https://code.claude.com/docs/e
 
 *   **Subdirectories (`./subfolder/CLAUDE.md`)**
     *   **Effect:** Applies specifically when Claude reads or modifies files within that subfolder.
-    *   **Use Case:** Monorepos or directory-specific rules (e.g., frontend vs. backend conventions).
+    *   **Use Case:** Shaping Claude Opus 5's behavior when you use it for specific specs, Monorepos or directory-specific rules (e.g., frontend vs. backend conventions).
 
 ## Key Features
 
