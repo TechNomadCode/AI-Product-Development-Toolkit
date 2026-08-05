@@ -8,7 +8,7 @@ This repository is organized into two primary sections:
 
 *   **Prompt Templates (`prompt-templates/`):** Interactive conversational prompts for product planning, specs, UX flows, and task generation.
 *   **Agent Configurations (`agent-configs/`):** Behavioral rules, system instructions, and configuration files for AI coding assistants like Claude Code and Cursor.
-*   **Game Dev Pipeline (3D Assets) (`3D-asset-pipeline-game-dev/`):** Hybrid 3D game asset development pipeline designed for creators with **zero manual Blender experience**.
+*   **Game Dev Pipeline (3D Assets) (`3D-asset-pipeline`):** Hybrid 3D game asset development pipeline designed for creators with **zero manual Blender experience**.
 
 ## High-Level Workflow
 
@@ -17,15 +17,16 @@ The toolkit supports an end-to-end development process:
 1.  **Product Planning:** Define PRDs, UX flows, MVP concepts, and more using templates in [`prompt-templates/`](./prompt-templates/).
 2.  **Agent Execution:** Configure your coding assistant using files found in [`agent-configs/`](./agent-configs/).
 3.  **State Management:** Distill long chat sessions into continuation plans when context windows get full.
-4.  **3D Assets:** Set up a 3D game asset development pipeline with AI. [`3D-asset-pipeline-game-dev/`](./3D-asset-pipeline-game-dev/).
+4.  **Game Development:** Set up a 3D asset pipeline with AI. [`3D-asset-pipeline`](./3D-asset-pipeline-game-dev/).
 
 
 ## Repository Structure
 
 For detailed instructions on using specific tools, refer to the documentation inside each main directory:
 
-*   **[Prompt Templates Directory (`prompt-templates/`)](./prompt-templates/README.md)** - Guides, workflows, and templates for product planning.
-*   **[Agent Configurations Directory (`agent-configs/`)](./agent-configs/README.md)** - System rules and setup instructions for AI coding assistants.
+*   **[Prompt Templates Directory (`prompt-templates/`)](./prompt-templates/README.md)**
+*   **[Agent Configurations Directory (`agent-configs/`)](./agent-configs/README.md)**
+*   **[3D-Asset Pipeline Directory (`agent-configs/`)](./3D-asset-pipeline/README.md)**
 
 ⚠️ **Readme files in subfolders contain crucial usage details for specific tools - review them before running prompts or copying configs.**
 
