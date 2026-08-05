@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary & Architecture
 
-This pipeline allows a developer with **zero manual 3D/Blender experience** to build a 3D hack-and-slash game. 
+This pipeline allows a solo developer with **zero manual 3D/Blender experience** to create 3D games using AI.
 
 * **You (Human):** Handle all creative generation, visual previewing, texture painting, lighting map creation, and file downloads in the Rodin Web GUI Suite (0% credit burn risk).
 * **Claude Code:** Handles automated inspection and data cleanup via Blender Lab MCP, local file management, and writing Game Engine code (C#/GDScript).
