@@ -14,6 +14,7 @@ What makes these prompts unique is their **user-centered, guided conversational 
 
 ## Template Index
 
+*   [user-research-questionnaire](./user-research-questionnaire/): Templates for designing an implementation-ready user research questionnaire and turning collected responses into evidence-linked PRD Research Input.
 *   [prd-generation](./prd-generation/): Template for creating comprehensive Product Requirements Documents.
 *   [ux-user-flow](./ux-user-flow/): Template for translating PRDs into detailed UX Specifications.
 *   [mvp-concept-definition](./mvp-concept-definition/): Template for defining focused MVP scope, hypotheses, and features.
