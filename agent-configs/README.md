@@ -11,7 +11,7 @@ Keep reusable instructions and tool permissions in one place, then adapt them to
 | Configuration | Purpose |
 | --- | --- |
 | [Claude Opus 5 instructions](./claude-code-desktop/claude-opus-5/) | Model-specific `CLAUDE.md` with working conventions and Context7 MCP guidance. |
-| [Claude Code permission guard](./claude-code-desktop/.claude/README.md) | Strict, model-independent [settings.json](./claude-code-desktop/.claude/settings.json) policy covering credentials, files, Git, OS administration, cloud infrastructure, containers, databases, publishing, network tools, and MCP services. Remove restrictions to fit your workflow. |
+| [Claude Code permission guard](./claude-code-desktop/permission-guardrails/README.md) | Strict, model-independent [settings.json](./claude-code-desktop/permission-guardrails/settings.json) policy covering credentials, files, Git, OS administration, cloud infrastructure, containers, databases, publishing, network tools, and MCP services. Remove restrictions to fit your workflow. |
 
 ## Configuration Scopes
 
@@ -33,7 +33,7 @@ Anthropic's [settings.json directory entry](https://code.claude.com/docs/en/clau
 
 > Permissions, hooks, env vars, model defaults
 
-Start with [Explore the .claude directory](https://code.claude.com/docs/en/claude-directory) for file placement, then use [Configure permissions](https://code.claude.com/docs/en/permissions) for rule behavior. The [guard README](./claude-code-desktop/.claude/README.md) documents the enabled restrictions, how to subtract them, and platform limits.
+Start with [Explore the .claude directory](https://code.claude.com/docs/en/claude-directory) for file placement, then use [Configure permissions](https://code.claude.com/docs/en/permissions) for rule behavior. The [guard README](./claude-code-desktop/permission-guardrails/README.md) documents the enabled restrictions, how to subtract them, and platform limits.
 
 The guard blocks common high-impact command families, content searches, and shell file readers, and requires approval for remaining shell, MCP, and web tool calls. It also enables the Bash sandbox where supported; native Windows retains permission checks but has no Claude Bash sandbox. Expect routine shell commands to prompt and some read-only operations to be blocked by whole-tool rules. See [sandbox support](https://code.claude.com/docs/en/sandboxing#get-started).
 

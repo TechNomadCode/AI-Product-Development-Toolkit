@@ -52,7 +52,7 @@ For command semantics beyond Claude's matcher, use the relevant primary referenc
 
 ## Installation and Subtraction
 
-Merge the file into `<project>/.claude/settings.json` for a shared project policy, or `~/.claude/settings.json` for personal use across projects. Windows normally uses `%USERPROFILE%\.claude`; `CLAUDE_CONFIG_DIR` can change this. For private project settings use `.claude/settings.local.json` and ignore it in Git if you create it manually. This nested repository folder is a distribution location. See [settings files](https://code.claude.com/docs/en/settings#settings-files).
+The repository stores this policy in `agent-configs/claude-code-desktop/permission-guardrails/`. Merge [settings.json](./settings.json) into `<project>/.claude/settings.json` for a shared project policy, or `~/.claude/settings.json` for personal use across projects. Windows normally uses `%USERPROFILE%\.claude`; `CLAUDE_CONFIG_DIR` can change this. For private project settings use `.claude/settings.local.json` and ignore it in Git if you create it manually. See [settings files](https://code.claude.com/docs/en/settings#settings-files).
 
 Preserve unrelated settings. Permission and sandbox arrays merge across scopes: an empty array here does not clear existing grants or exceptions elsewhere. Inspect effective settings before relying on the result. See [settings precedence](https://code.claude.com/docs/en/settings#settings-precedence).
 
