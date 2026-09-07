@@ -17,3 +17,7 @@ Agent configurations can be applied at different directory levels depending on y
 *   **Global Level:** Configurations placed in your user home directory (such as `~/.claude/CLAUDE.md`) apply to all coding sessions on your machine.
 *   **Project Level:** Configurations placed in a repository root (such as `./CLAUDE.md` or `.cursorrules`) apply specifically to that codebase and can be shared with team members via Git.
 *   **Local Overrides:** Uncommitted local configuration notes (such as `./CLAUDE.local.md`) apply only to your local machine for a specific codebase.
+
+## Related Post
+
+[CLAUDE.md for Opus 5 based on Anthropic's official docs](https://www.reddit.com/r/ClaudeAI/comments/1vd57c0/claudemd_for_opus_5_based_on_anthropics_official/)
