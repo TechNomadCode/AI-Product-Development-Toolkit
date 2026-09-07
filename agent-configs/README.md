@@ -1,22 +1,41 @@
 # Agent Configurations
 
-This directory contains system prompts, behavioral guidelines, safety rules, and configuration files for AI coding agents and assistants.
+This directory contains behavioral instructions and configuration files for AI coding agents and assistants.
 
 ## Purpose
 
-AI coding agents perform best when provided with explicit boundaries, tool execution defaults, and project conventions. Storing these configurations centrally allows for consistent behavior across projects and easy distribution to local environments.
+Keep reusable instructions and tool permissions in one place, then adapt them to each project. For Claude Code, use `CLAUDE.md` for working conventions and `settings.json` for permission rules; see the official [directory guide](https://code.claude.com/docs/en/claude-directory).
 
 ## Configuration Index
 
-*   [claude-code-desktop/claude-opus-5](./claude-code-desktop/claude-opus-5/): Global `CLAUDE.md` optimized for Claude Opus 5 with context 7 MCP specifically.
+| Configuration | Purpose |
+| --- | --- |
+| [Claude Opus 5 instructions](./claude-code-desktop/claude-opus-5/) | Model-specific `CLAUDE.md` with working conventions and Context7 MCP guidance. |
+| [Claude Code permission guard](./claude-code-desktop/.claude/README.md) | Strict, model-independent [settings.json](./claude-code-desktop/.claude/settings.json) policy covering credentials, files, Git, OS administration, cloud infrastructure, containers, databases, publishing, network tools, and MCP services. Remove restrictions to fit your workflow. |
 
 ## Configuration Scopes
 
-Agent configurations can be applied at different directory levels depending on your tool:
+For Claude Code settings, choose the destination by scope:
 
-*   **Global Level:** Configurations placed in your user home directory (such as `~/.claude/CLAUDE.md`) apply to all coding sessions on your machine.
-*   **Project Level:** Configurations placed in a repository root (such as `./CLAUDE.md` or `.cursorrules`) apply specifically to that codebase and can be shared with team members via Git.
-*   **Local Overrides:** Uncommitted local configuration notes (such as `./CLAUDE.local.md`) apply only to your local machine for a specific codebase.
+| Scope | Settings destination | Use |
+| --- | --- | --- |
+| User | `~/.claude/settings.json` | Personal settings across projects. On Windows, `~/.claude` normally resolves to `%USERPROFILE%\.claude`. |
+| Project | `<project>/.claude/settings.json` | Shared project settings committed to Git. |
+| Local | `<project>/.claude/settings.local.json` | Personal project settings. Add this file to `.gitignore` if you create it manually. |
+
+These repository folders store reusable samples. Merge the settings into the intended destination; this nested sample is not the toolkit repository's root configuration. Preserve existing keys and review path rules for the chosen scope before copying. See [settings scopes](https://code.claude.com/docs/en/settings#settings-files).
+
+Managed settings have the highest priority, followed by command-line settings, local, project, and user settings. Permission arrays merge across scopes, so a local file does not erase a global deny list. See [settings precedence](https://code.claude.com/docs/en/settings#settings-precedence).
+
+## Official References
+
+Anthropic's [settings.json directory entry](https://code.claude.com/docs/en/claude-directory#ce-settings-json) describes its purpose as:
+
+> Permissions, hooks, env vars, model defaults
+
+Start with [Explore the .claude directory](https://code.claude.com/docs/en/claude-directory) for file placement, then use [Configure permissions](https://code.claude.com/docs/en/permissions) for rule behavior. The [guard README](./claude-code-desktop/.claude/README.md) documents the enabled restrictions, how to subtract them, and platform limits.
+
+The guard blocks common high-impact command families, content searches, and shell file readers, and requires approval for remaining shell, MCP, and web tool calls. It also enables the Bash sandbox where supported; native Windows retains permission checks but has no Claude Bash sandbox. Expect routine shell commands to prompt and some read-only operations to be blocked by whole-tool rules. See [sandbox support](https://code.claude.com/docs/en/sandboxing#get-started).
 
 ## Related Post
 
