@@ -2,13 +2,15 @@
 
 This document describes a meta-instruction prompt that distills a long chat history into a single, structured session state document (`project_plan_continuation.md`) for starting a fresh chat.
 
+**Start here:** copy the [prompt in port.md](./port.md) into your current conversation while the needed history is still available. It cannot recover messages the model no longer has access to.
+
 ## Description
 
 Long AI development sessions accumulate token bloat and context noise. This prompt directs the LLM to analyze the entire chat history and output a consolidated project plan. It captures original guidelines, new rules derived from your corrections, technical learnings, supervisor action items, and an updated task list so you can resume work in a clean session without losing context.
 
 ## Why Use This Prompt?
 
-*   **Resets Context Window:** Eliminates chat bloat while preserving 100% of project progress.
+*   **Creates a Shorter Handoff:** Summarizes available project history for a fresh chat; review it for missing or incorrect details.
 *   **Extracts Learned Rules:** Converts real-time corrections into forward-looking guidelines.
 *   **Preserves Technical Directives:** Saves discovered API details, data structures, and setup facts.
 *   **Enables Clean Hand-Offs:** Makes it easy to start a fresh chat or switch AI tools.
@@ -28,8 +30,7 @@ Long AI development sessions accumulate token bloat and context noise. This prom
 
 ## Model Compatibility
 
-*   **Models:** Requires long-context, instruction-following models (e.g., Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro).
-*   **Parameters:** Use **low temperature** (0.1–0.3) for accurate, factual extraction.
+Use a conversational model with access to the project history you want to summarize. Check the extracted facts against your files and decisions before starting the next session.
 
 ## Important Considerations
 

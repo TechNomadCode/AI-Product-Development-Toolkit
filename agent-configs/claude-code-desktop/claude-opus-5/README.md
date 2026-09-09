@@ -1,44 +1,43 @@
-# Global Claude Code Agent Rules
+# Claude Opus 5 working instructions
 
-This folder contains a `CLAUDE.md` system configuration that defines behavioral guidelines, safety guardrails, MCP tool usage, and execution defaults for Claude Code specifically for Claude Opus 5.
+This folder contains [CLAUDE.md](./CLAUDE.md), a reusable set of working instructions intended for Claude Opus 5 in Claude Code. It asks for concise responses, clear task scope, current documentation, and controlled tool use.
 
 ## Description
 
-This `CLAUDE.md` file acts as the universal system prompt for Claude Code. It enforces strict action defaults (parallel tool execution, minimal chatter), mandates modern dependency lookups via Context 7 MCP, establishes destructive command guardrails, and manages subagent delegation boundaries.
+Claude Code loads `CLAUDE.md` as context, not as its system prompt or an enforced permission policy. Conflicting instructions can reduce adherence; review the rules alongside your existing configuration. See [how Claude Code loads memory](https://code.claude.com/docs/en/memory).
 
-> **Official Anthropic Documentation:** Built according to Anthropic's [Claude Prompting Best Practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) and optimized specifically using the [Claude Opus 5 Prompting Guidelines](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5).
+The configuration was written with Anthropic's [prompting guidance](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) and [Opus 5 guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5) as references.
 
 ## How to Use
 
-Based on the official [Claude Code Documentation](https://code.claude.com/docs/en/best-practices#write-an-effective-claude-md), where you place the `CLAUDE.md` file determines its scope and effect across your sessions:
+1. Read the [rules file](./CLAUDE.md) and compare it with your existing project instructions.
+2. For a project using the intended model, merge the relevant rules into the project's root `CLAUDE.md`; preserve its build commands and other project requirements.
+3. This file requests Context7 lookups: configure [Context7 for Claude Code](https://context7.com/docs/clients/claude-code) if you keep that workflow, or adapt the instructions to your available documentation tools.
+4. Start a fresh session and use `/memory` and `/context` to inspect the loaded files. Try a small task before adopting the rules more widely.
 
-*   **Global Setup (`~/.claude/CLAUDE.md`) WARNING, DO NOT PLACE MY CONFIG HERE IF YOU ARE USING OTHER MODELS AS THIS IS SPECIFICALLY MADE FOR OPUS 5**
-    *   **Effect:** Applies automatically to **all** Claude Code sessions on your computer across every project.
-    *   **Use Case:** Personal behavioral rules, safety guardrails, and default tool settings.
+## Choose the scope
 
-*   **Project Root (`./CLAUDE.md`)**
-    *   **Effect:** Applies to anyone working in the repository when committed to Git (overrides global rules).
-    *   **Use Case:** Shaping Claude Opus 5's behavior when you are working on this project, Build/test commands, repository coding standards and architectural conventions.
+| Location | Intended scope |
+| --- | --- |
+| Project root `CLAUDE.md` | Shared project instructions when committed to Git |
+| Project `CLAUDE.local.md` | Personal project notes; confirm your Git ignore rules before using it |
+| Subdirectory `CLAUDE.md` | Instructions loaded when Claude works with that directory |
+| User `~/.claude/CLAUDE.md` | Instructions across projects; avoid placing this model-specific sample here if you switch models |
 
-*   **Personal Local Notes (`./CLAUDE.local.md`)**
-    *   **Effect:** Applies only to your local machine for a specific project (ignored by Git via `.gitignore`).
-    *   **Use Case:** Personal environment variables, local paths, or developer-specific workflow notes.
-
-*   **Subdirectories (`./subfolder/CLAUDE.md`)**
-    *   **Effect:** Applies specifically when Claude reads or modifies files within that subfolder.
-    *   **Use Case:** Shaping Claude Opus 5's behavior when you use it for specific specs, Monorepos or directory-specific rules (e.g., frontend vs. backend conventions).
+Multiple instruction files can contribute context. Do not assume a project file erases conflicting user instructions; resolve conflicts and check what loaded. See [memory troubleshooting](https://code.claude.com/docs/en/memory).
 
 ## Key Features
 
-*   **Context 7 MCP Enforcement:** Mandates fetching up-to-date docs and API versions before writing code to prevent outdated assumptions. Learn more about setting up and using Context 7 via the [Context 7 Documentation](https://context7.com/docs/clients/claude-code).
-*   **Safety Guardrails:** Requires user approval for destructive commands (`rm -rf`, `git push --force`, DB drops).
-*   **Execution Defaults:** Directs parallel tool calling, concise narration, and autonomous execution without over-verification.
-*   **Context Compaction & State Persistence:** Ensures state is saved to `progress.txt`/`tests.json` before context refreshes.
-*   **Local Precedence:** Local project `./CLAUDE.md` files automatically override or extend global rules.
+* **Documentation:** Requests current dependency references before implementation.
+* **Task scope:** Requests concise narration, parallel independent work, and checks appropriate to the change.
+* **Destructive actions:** Asks the assistant to request approval; use Claude Code permissions for tool restrictions, not prose alone.
+* **Continuation:** Requests saved progress before context refreshes.
+
+For an optional strict tool policy, read the separate [permission guardrails guide](../permission-guardrails/README.md) before applying it.
 
 ## Model Compatibility
 
-*   **Primary Target:** **Claude Opus 5** (utilizes Opus 5 instruction-following and tool-use patterns).
+*   **Intended target:** **Claude Opus 5**; inspect the selected model and test the rules for your workflow rather than assuming they suit every model.
 *   **Documentation References:**
     *   [Claude Code Best Practices (`CLAUDE.md`)](https://code.claude.com/docs/en/best-practices#write-an-effective-claude-md)
     *   [Claude Prompting Best Practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)

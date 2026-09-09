@@ -2,6 +2,8 @@
 
 This directory contains interactive, conversational prompt templates designed to take product ideas from vision to build-ready specifications.
 
+**New here?** Start with the [PRD prompt](./prd-generation/prd-generation.md) and its [usage guide](./prd-generation/README.md). Each folder below explains what to paste into its prompt and what to expect next.
+
 ## Guided Conversational Approach
 
 What makes these prompts unique is their **user-centered, guided conversational design**:
@@ -34,4 +36,4 @@ What makes these prompts unique is their **user-centered, guided conversational 
 
 ## Model Compatibility
 
-These prompts were developed with large context window models in mind (like Google Gemini, GPT-4, Claude 3), as they need to maintain conversation context throughout lengthy exchanges. For best results when generating final document drafts, consider using a low temperature setting (0.2-0.5) to encourage factual, focused output.
+Use a conversational model that can retain your inputs and confirmed decisions throughout the exchange. The templates are plain text, but output quality varies by model and task; review the draft before using it. The subfolder guides explain any additional setup.

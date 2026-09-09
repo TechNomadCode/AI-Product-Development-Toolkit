@@ -1,44 +1,55 @@
 # AI Product Development Toolkit
 
-Welcome to my personal collection of prompt templates, AI agent configurations and more. This repository serves as a central place to store, organize, and share tools for AI-driven software development, guiding projects from initial idea to working MVP.
+**Free prompts and agent rules for building software with AI:** clarify what to build, keep the work focused, and carry project decisions into the next session.
 
-## About This Repository
+Copy a prompt into your AI chat, answer its questions, and review the resulting specification or handoff. The templates are Markdown files; you can use them without cloning this repository or installing a package.
 
-This repository is organized into two primary sections:
+## Start here
 
-*   **Prompt Templates (`prompt-templates/`):** Interactive conversational prompts for product planning, specs, UX flows, and task generation.
-*   **Agent Configurations (`agent-configs/`):** Behavioral rules, system instructions, and configuration files for AI coding assistants like Claude Code and Cursor.
-*   **Game Dev Pipeline (3D Assets) (`3D-asset-pipeline`):** Hybrid 3D game asset development pipeline designed for creators with **zero manual Blender experience**.
+| What you need | Open this | What to bring | What you get |
+| --- | --- | --- | --- |
+| Turn an app idea into clear requirements | [PRD prompt](./prompt-templates/prd-generation/prd-generation.md) · [Guide](./prompt-templates/prd-generation/README.md) | Rough notes, intended users, and constraints | A draft Product Requirements Document built through questions and confirmation |
+| Give your coding assistant clear working rules | [Claude Opus 5 rules](./agent-configs/claude-code-desktop/claude-opus-5/CLAUDE.md) · [Setup guide](./agent-configs/claude-code-desktop/claude-opus-5/README.md) | Your existing project instructions and the matching model | Instructions for concise responses, task scope, and tool use |
+| Continue a project in a fresh AI chat | [Session-continuation prompt](./prompt-templates/session-continuation/port.md) · [Guide](./prompt-templates/session-continuation/README.md) | The current conversation, while its history is still available | A reviewable handoff with decisions, progress, and remaining tasks |
 
-## High-Level Workflow
+## Try the PRD prompt
 
-The toolkit supports an end-to-end development process:
+1. Open the [PRD prompt file](./prompt-templates/prd-generation/prd-generation.md) and copy its contents.
+2. Replace the text between `BRAINDUMP START` and `BRAINDUMP END` with your idea; fill or remove the other bracketed placeholders.
+3. Paste the prompt into your AI chat, answer the questions, and confirm the decisions before asking for the final draft.
 
-1.  **Product Planning:** Define PRDs, UX flows, MVP concepts, and more using templates in [`prompt-templates/`](./prompt-templates/).
-2.  **Agent Execution:** Configure your coding assistant using files found in [`agent-configs/`](./agent-configs/).
-3.  **State Management:** Distill long chat sessions into continuation plans when context windows get full.
-4.  **Game Development:** Set up a 3D asset pipeline with AI. [`3D-asset-pipeline`](./3D-asset-pipeline-game-dev/).
+Already have a PRD and a concise MVP concept? Use the [ultra-lean build prompt](./prompt-templates/ultra-lean-mvp-development-planning/Guided-Ultra-Lean-MVP.md) to define the first build's purpose, features, and technical approach.
 
+## Choose your next step
 
-## Repository Structure
+You can enter at the step you need; each folder explains its required inputs.
 
-For detailed instructions on using specific tools, refer to the documentation inside each main directory:
+| Step | Resource | Output |
+| --- | --- | --- |
+| Plan user research | [Research questionnaire](./prompt-templates/user-research-questionnaire/) | Questionnaire draft, then an evidence-linked PRD input from collected responses |
+| Define the product | [PRD generation](./prompt-templates/prd-generation/) | Goals, users, requirements, and constraints |
+| Map the experience | [UX and user flow](./prompt-templates/ux-user-flow/) | User journeys and interface requirements |
+| Choose the first release | [MVP concept](./prompt-templates/mvp-concept-definition/) | Core problem, hypothesis, and limited feature scope |
+| Plan the build | [MVP development plan](./prompt-templates/mvp-development-planning/) or [ultra-lean build specification](./prompt-templates/ultra-lean-mvp-development-planning/) | Detailed development plan or a smaller build specification |
+| Plan verification | [Test plan](./prompt-templates/test-plan-generation/) | Test scope, cases, and acceptance criteria |
+| Prepare a visual brief | [v0 design prompts](./prompt-templates/v0-design-prompts/) | A design prompt using your UX specification and MVP scope |
+| Prepare the next session | [Session continuation](./prompt-templates/session-continuation/) | Current state, corrections, and next tasks |
 
-*   **[Prompt Templates Directory (`prompt-templates/`)](./prompt-templates/README.md)**
-*   **[Agent Configurations Directory (`agent-configs/`)](./agent-configs/README.md)**
-*   **[3D-Asset Pipeline Directory (`agent-configs/`)](./3D-asset-pipeline/README.md)**
+For the full instructions, see the [prompt template guide](./prompt-templates/README.md).
 
-⚠️ **Readme files in subfolders contain crucial usage details for specific tools - review them before running prompts or copying configs.**
+## Configure your coding assistant
 
-## How I Designed These
+The [agent configuration guide](./agent-configs/README.md) separates behavioral instructions from tool permissions:
 
-I use official documentation, AI tools for prompt and my personal [Prompt Rulebook](https://promptquick.ai) combined with my experience throughout my journey of study and engineering.
+* [Claude Opus 5 instructions](./agent-configs/claude-code-desktop/claude-opus-5/README.md): review the model scope and merge relevant rules with your existing project instructions.
+* [Claude Code permission guardrails](./agent-configs/claude-code-desktop/permission-guardrails/README.md): an optional strict policy with broad restrictions; read its effects before using it.
 
+The prompts use guided questions, confirmation points, and inputs from earlier steps to help you make explicit decisions. Outputs remain drafts: review requirements, code, and handoffs before relying on them, and remove private information you do not need to share with your AI tool.
 
-## License
+**Star this repository to save it for your next project.** If you find an unclear step, [open an issue](https://github.com/TechNomadCode/AI-Product-Development-Toolkit/issues) with the template name and a small, non-sensitive example.
 
-You are generally free to use, adapt, and share these resources. See the `LICENSE` file for more details.
+## About and license
 
-## Disclaimer
+I develop these resources using official documentation, AI tools, and my own software development work. My separate [Prompt Rulebook](https://promptquick.ai) covers broader prompting techniques.
 
-AI models and their outputs can be unpredictable. These prompts and configurations are starting points and may require modification to achieve your desired results. Always review and verify AI-generated content. Human oversight, strategic decision-making, and technical validation are critical at every step.
+This toolkit is free to use, adapt, and share under the [MIT license](./LICENSE).
