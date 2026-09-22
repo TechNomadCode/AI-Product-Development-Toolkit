@@ -10,6 +10,7 @@ Keep reusable instructions and tool permissions in one place, then adapt them to
 
 | Configuration | Purpose |
 | --- | --- |
+| [Claude Opus 5.5 instructions](./claude-code-desktop/claude-opus-5-5/) | Latest model-specific `CLAUDE.md`: the Opus 5 conventions and Context7 MCP guidance with fewer repeated or rigid rules, plus effort-level notes. |
 | [Claude Opus 5 instructions](./claude-code-desktop/claude-opus-5/) | Model-specific `CLAUDE.md` with working conventions and Context7 MCP guidance. |
 | [Claude Code permission guard](./claude-code-desktop/permission-guardrails/README.md) | Strict, model-independent [settings.json](./claude-code-desktop/permission-guardrails/settings.json) policy covering credentials, files, Git, OS administration, cloud infrastructure, containers, databases, publishing, network tools, and MCP services. Remove restrictions to fit your workflow. |
 
