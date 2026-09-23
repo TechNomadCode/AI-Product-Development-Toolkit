@@ -12,6 +12,15 @@ Everything here is a plain Markdown file. You don't need to install anything or 
 
 **New here?** Start with the [PRD prompt](./prompt-templates/prd-generation/prd-generation.md) ([guide](./prompt-templates/prd-generation/README.md)). It turns a rough app idea into a clear requirements document.
 
+## What makes these prompts different
+
+Most prompts ask the AI to write a document straight away, so it fills the gaps with guesses. These prompts make it interview you first:
+
+- **It asks before it writes.** The AI asks a few targeted questions at a time about your idea, users, and goals.
+- **You confirm what it understood.** It states its assumptions and checks with you before moving to a new section.
+- **It only drafts once you agree.** The final document is built from your answers, not from guesses.
+- **Each step feeds the next.** Later prompts use your PRD and earlier outputs, so the plan stays consistent.
+
 ## Prompts
 
 Listed in the order you would normally use them. You can start at any step; each folder's guide explains what to bring.
