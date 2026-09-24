@@ -33,6 +33,7 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 **What it's like to work with:**
 - **Few questions, at the right time.** It asks what the next piece of work needs. Everything else, such as your domain, tax, legal pages or refund policy, is noted with a due moment and comes up then. When you say **yes**, you accept all its recommendations.
 - **It explains its limits up front.** It never uses hosted credentials or API keys, not even test keys. For anything that needs them, like trying payments with a PayPal sandbox key, it gives you the steps and you do them on the staging site. Its own tests use stand-ins, and it tells you so.
+- **It speaks plain language.** No jargon, so owners without a technical background can follow every step.
 - **It does the legwork.** It does every local step itself and hands you one command or a few clicks for the rest.
 - **It checks, not remembers.** Before using a tool or service, it reads the current official docs and notes its source. It won't decide law, tax or pricing questions; it shows you options with official sources.
 - **It saves as it goes.** Progress is saved after every step. At natural stopping points it suggests a fresh session: type what it says (`/clear` or `/new`), then **continue**.
@@ -44,7 +45,7 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 - GitHub, Vercel and Supabase accounts once the app goes online, at the end of stage 3. The agent tells you when.
 - A budget check for commercial apps. Free hosting and database plans may not allow a shop, or enough separate projects. The agent checks the current plans when it's time.
 
-**Tip:** setup (stage 3) is the heaviest step. It worked at low effort in testing, but a higher effort setting gives it more room.
+**Tip:** setup (stage 3) is the heaviest step. If your agent lets you choose how hard the model thinks (an effort or reasoning setting), a higher level helps here, though low worked in testing.
 
 ## Tested so far
 - **Tested:** Claude Code desktop, from setup through planning, decisions, the first feature, and the first pieces of a shop (catalogue, photos, cart). The automatic checks passed on GitHub on the first push.

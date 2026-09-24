@@ -6,17 +6,15 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-D97757)
-![Works with Codex](https://img.shields.io/badge/works%20with-Codex-412991)
-
-[Planning prompts](#planning-prompts) &nbsp;·&nbsp; [AI App Starter](#ai-app-starter) &nbsp;·&nbsp; [Agent configurations](#agent-configurations)
+[![Works with Codex (beta)](https://img.shields.io/badge/works%20with-Codex%20(beta)-412991)](#tested-so-far)
 
 </div>
 
 | | What it is | Use it when |
 | --- | --- | --- |
-| **[Planning prompts](#planning-prompts)** | Six guided prompts that interview you and turn an idea into clear, build-ready documents. Any AI chat, any stack. | You have an idea and want a solid plan |
-| **[AI App Starter](#ai-app-starter)** | A project your AI coding agent builds with you, from idea to launch, safely and step by step. Next.js, Supabase and Vercel. | You want to build and launch a web app |
-| **[Agent configurations](#agent-configurations)** | Working instructions that keep Claude Code focused, concise and working from current docs. | You code with Claude Code every day |
+| **[Planning prompts](#planning-prompts)** | Guided prompts that interview you, then write your plan. Any AI chat. | You have an idea and want a solid plan |
+| **[AI App Starter](#ai-app-starter)** | A project your coding agent builds with you, step by step, up to launch. | You want to build and launch a web app |
+| **[Agent configurations](#agent-configurations)** | Working instructions for Claude Code. | You code with Claude Code every day |
 
 ## Planning prompts
 
@@ -36,7 +34,7 @@ Most prompts tell the AI to write a document straight away, so it fills every ga
 | 5. Plan the build | [MVP development plan](./prompt-templates/mvp-development-planning/) or [ultra-lean version](./prompt-templates/ultra-lean-mvp-development-planning/) | A full development plan, or a lean build spec for a fast first version |
 | 6. Plan testing | [Test plan](./prompt-templates/test-plan-generation/) | Test scope, cases and acceptance criteria |
 
-**How to use them:** open a prompt, fill in the bracketed placeholders, paste it into any AI chat and answer its questions. Start at any step; each folder's guide says what to bring. New here? Start with the [PRD prompt](./prompt-templates/prd-generation/prd-generation.md).
+**How to use them:** open a prompt, fill in the bracketed placeholders, paste it into any AI chat and answer its questions. Start at any step; each folder's guide says what to bring. Most people start at step 2, the [PRD prompt](./prompt-templates/prd-generation/prd-generation.md). Do step 1 first if you have potential users you can ask.
 
 More: the [prompt template guide](./prompt-templates/README.md), and why this approach works: [How I Turn Ideas Into Products With AI Prompts](https://promptquick.ai/blog/turn-ideas-into-products-with-ai).
 
@@ -60,39 +58,19 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 
 **3.** Just talk to it. Ask **what's next?**, then say **continue** or **do X instead**. Already made a PRD or MVP scope with the planning prompts? It asks for them and skips those interviews.
 
-### What it fixes
+### Why use it
 
-**Safe by design**
+- **It can't break production.** It works only on your computer, with a local database and stand-in payment and email services. It never holds keys, not even test keys, and pushing and deploying are blocked.
+- **It leads, in plain language.** It asks only what the next piece of work needs, does every local step itself, and hands you one command or a few clicks for the rest.
+- **It stays organized.** One plan, one decisions file, one list of known issues. Separate local, staging and production environments exist from day one, and new ideas go into the plan instead of derailing the work.
+- **It's honest about what's real.** It checks current official docs before using a tool, says when a test used a stand-in, and never decides law, tax or pricing for you.
+- **Risky work gets a second look.** Payment and permission work gets an independent review, ideally by a second agent.
 
-| The usual problem | With the starter |
-| --- | --- |
-| The agent could break production or leak keys | It works only on your computer, with a local database and stand-in payment and email services. It never holds keys, not even test keys. Pushing and deploying are blocked. |
-| Getting stuck on deploy steps | It does every local step and hands you one command or a few clicks for the rest. |
-| Risky code checked by the agent that wrote it | Payment and permission work gets an independent review, ideally by a second agent. |
-
-**Organized from day one**
-
-| The usual problem | With the starter |
-| --- | --- |
-| Late surprises force a rewrite or a new setup | The choices that shape the code come first. Separate local, staging and production environments exist from day one. |
-| A flood of questions up front | It reads what you already wrote and asks only what the next piece of work needs. The rest waits until it matters. |
-| Docs and plans scattered everywhere | One plan, one decisions file, one list of known issues. Nothing else. |
-| New ideas derail the work in progress | A new feature goes into the plan, and it asks: now, or after the current piece? |
-| Losing track between sessions | The plan records where you are. It suggests a fresh session at natural stopping points and picks up where it left off. |
-
-**Honest about what's real**
-
-| The usual problem | With the starter |
-| --- | --- |
-| The AI works from outdated knowledge | It checks current official docs before using a tool or service, and notes its source in the project. |
-| Tests pass, but the real service was never tried | It says when a test used a stand-in, and gives you the steps to try the real thing on staging. |
-| Confident answers about law, tax or pricing | It shows options with official sources and never decides these for you. |
-| Launch is an afterthought | Production, monitoring, security, search engines and privacy are checked part by part. |
-| Jargon | Plain language throughout, for non-technical owners too. |
+The [starter guide](./starters/nextjs-supabase-vercel/) walks through the five stages, from plan to launch, and what the agent does at each one.
 
 ### What you need
 
-- **To start:** Node.js, Git and Docker on your computer, and your coding agent. Setup is the heaviest step: it worked at low effort in testing, but a higher effort setting gives it more room.
+- **To start:** Node.js, Git and Docker on your computer, and your coding agent. Setup is the heaviest step. If your agent lets you choose how hard the model thinks (an effort or reasoning setting), a higher level helps here, though low worked in testing.
 - **Optional:** [Context7](https://context7.com/), a free docs tool for your agent. The agent checks current docs before using any tool or service; Context7 makes that faster and more reliable. Without it, the agent reads the official websites.
 - **Later, when the app goes online:** GitHub, Vercel and Supabase accounts. The agent tells you when. Free plans may not allow a commercial app, such as a shop; it checks the current plans for you.
 
