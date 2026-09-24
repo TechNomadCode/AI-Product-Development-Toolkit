@@ -68,7 +68,7 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 - **It's honest about what's real.** It checks current official docs before using a tool, says when a test used a stand-in, and never decides law, tax or pricing for you.
 - **Risky work gets a second look.** Payment and permission work gets an independent review, ideally by a second agent.
 
-The [starter guide](./starters/nextjs-supabase-vercel/) walks through the five stages, from plan to launch, and what the agent does at each one.
+More: the [starter guide](./starters/nextjs-supabase-vercel/), which walks through the five stages and what the agent does at each one, and why I made it: [AI App Starter: A Custom Step-by-Step Process for Apps With Claude Code](https://promptquick.ai/blog/ai-app-starter-nextjs-supabase-vercel).
 
 ### What you need
 
