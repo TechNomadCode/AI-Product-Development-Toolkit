@@ -33,8 +33,6 @@ Multiple instruction files can contribute context. Do not assume a project file 
 * **Destructive actions:** Asks the assistant to request approval; use Claude Code permissions for tool restrictions, not prose alone.
 * **Continuation:** Requests saved progress before context refreshes.
 
-For an optional strict tool policy, read the separate [permission guardrails guide](../permission-guardrails/README.md) before applying it.
-
 ## Model Compatibility
 
 *   **Intended target:** **Claude Opus 5**; inspect the selected model and test the rules for your workflow rather than assuming they suit every model.

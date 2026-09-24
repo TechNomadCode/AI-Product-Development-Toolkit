@@ -1,0 +1,56 @@
+# Commands Codex must never run in this project. The owner or CI does these.
+# Claude Code's equivalent is the deny list in .claude/settings.json.
+
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "forbidden",
+    justification = "The owner pushes. Commit locally and report instead.",
+)
+
+prefix_rule(
+    pattern = ["supabase", ["login", "link"]],
+    decision = "forbidden",
+    justification = "This checkout never connects to hosted Supabase. Use the local stack.",
+)
+
+prefix_rule(
+    pattern = ["npx", "supabase", ["login", "link"]],
+    decision = "forbidden",
+    justification = "This checkout never connects to hosted Supabase. Use the local stack.",
+)
+
+prefix_rule(
+    pattern = ["supabase", ["db", "migration"], ["push", "repair"]],
+    decision = "forbidden",
+    justification = "Hosted migrations run only from the CI workflows.",
+)
+
+prefix_rule(
+    pattern = ["npx", "supabase", ["db", "migration"], ["push", "repair"]],
+    decision = "forbidden",
+    justification = "Hosted migrations run only from the CI workflows.",
+)
+
+prefix_rule(
+    pattern = ["npx", "vercel"],
+    decision = "forbidden",
+    justification = "Deployments and Vercel settings belong to the owner and CI.",
+)
+
+prefix_rule(
+    pattern = ["vercel"],
+    decision = "forbidden",
+    justification = "Deployments and Vercel settings belong to the owner and CI.",
+)
+
+prefix_rule(
+    pattern = ["gh", "workflow", "run"],
+    decision = "forbidden",
+    justification = "The owner starts workflows, including the production migration.",
+)
+
+prefix_rule(
+    pattern = ["gh", ["secret", "variable"]],
+    decision = "forbidden",
+    justification = "Secrets and variables are managed by the owner in GitHub.",
+)

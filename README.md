@@ -1,56 +1,142 @@
+<div align="center">
+
 # AI Product Development Toolkit
 
-Free, copy-paste prompts and coding-assistant rules for building software with AI.
+**Plan, build and launch products with AI, without the mess.**
 
-Everything here is a plain Markdown file. You don't need to install anything or clone this repository.
+[![MIT license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-D97757)
+![Works with Codex](https://img.shields.io/badge/works%20with-Codex-412991)
 
-## How to use a prompt
+[Planning prompts](#planning-prompts) &nbsp;·&nbsp; [AI App Starter](#ai-app-starter) &nbsp;·&nbsp; [Agent configurations](#agent-configurations)
 
-1. Pick a prompt from the table below and open its file.
-2. Copy the contents and fill in the bracketed placeholders with your project details.
-3. Paste it into your AI chat, answer its questions, and review the draft it produces.
+</div>
 
-**New here?** Start with the [PRD prompt](./prompt-templates/prd-generation/prd-generation.md) ([guide](./prompt-templates/prd-generation/README.md)). It turns a rough app idea into a clear requirements document.
+| | What it is | Use it when |
+| --- | --- | --- |
+| **[Planning prompts](#planning-prompts)** | Six guided prompts that interview you and turn an idea into clear, build-ready documents. Any AI chat, any stack. | You have an idea and want a solid plan |
+| **[AI App Starter](#ai-app-starter)** | A project your AI coding agent builds with you, from idea to launch, safely and step by step. Next.js, Supabase and Vercel. | You want to build and launch a web app |
+| **[Agent configurations](#agent-configurations)** | Working instructions that keep Claude Code focused, concise and working from current docs. | You code with Claude Code every day |
 
-## What makes these prompts different
+## Planning prompts
 
-Most prompts ask the AI to write a document straight away, so it fills the gaps with guesses. These prompts make it interview you first:
+Most prompts tell the AI to write a document straight away, so it fills every gap with guesses. These prompts make it **interview you first**:
 
-- **It asks before it writes.** The AI asks a few targeted questions at a time about your idea, users, and goals.
-- **You confirm what it understood.** It states its assumptions and checks with you before moving to a new section.
-- **It only drafts once you agree.** The final document is built from your answers, not from guesses.
-- **Each step feeds the next.** Later prompts use your PRD and earlier outputs, so the plan stays consistent.
-
-## Prompts
-
-Listed in the order you would normally use them. You can start at any step; each folder's guide explains what to bring.
+- **It asks before it writes.** A few targeted questions at a time, about your idea, users and goals.
+- **It checks what it understood.** It states its assumptions and confirms them with you before moving on.
+- **It drafts only once you agree.** The document is built from your answers, not from guesses.
+- **Each step feeds the next.** Later prompts use your earlier documents, so the whole plan stays consistent.
 
 | Step | Prompt | What you get |
 | --- | --- | --- |
-| 1. Research users | [User research questionnaire](./prompt-templates/user-research-questionnaire/) | A questionnaire, then a research summary for your PRD |
-| 2. Define the product | [PRD generation](./prompt-templates/prd-generation/) | Goals, users, requirements, and constraints |
-| 3. Map the experience | [UX and user flow](./prompt-templates/ux-user-flow/) | User journeys and interface requirements |
-| 4. Scope the first release | [MVP concept](./prompt-templates/mvp-concept-definition/) | Core problem, hypothesis, and a short feature list |
-| 5. Plan the build | [MVP development plan](./prompt-templates/mvp-development-planning/) or [ultra-lean version](./prompt-templates/ultra-lean-mvp-development-planning/) | A detailed plan, or a smaller build spec |
-| 6. Plan testing | [Test plan](./prompt-templates/test-plan-generation/) | Test scope, cases, and acceptance criteria |
-| 7. Design the UI | [v0 design prompts](./prompt-templates/v0-design-prompts/) | A ready-to-use prompt for v0.dev |
-| Anytime | [Session continuation](./prompt-templates/session-continuation/) | A handoff so you can continue in a fresh chat |
+| 1. Research users | [User research questionnaire](./prompt-templates/user-research-questionnaire/) | A questionnaire, then an evidence-based research summary for your PRD |
+| 2. Define the product | [PRD generation](./prompt-templates/prd-generation/) | A product requirements document: goals, users, requirements and constraints |
+| 3. Map the experience | [UX and user flow](./prompt-templates/ux-user-flow/) | User journeys, screens and interface requirements |
+| 4. Scope the first release | [MVP concept](./prompt-templates/mvp-concept-definition/) | The core hypothesis, the problem to solve first and a short in/out feature list |
+| 5. Plan the build | [MVP development plan](./prompt-templates/mvp-development-planning/) or [ultra-lean version](./prompt-templates/ultra-lean-mvp-development-planning/) | A full development plan, or a lean build spec for a fast first version |
+| 6. Plan testing | [Test plan](./prompt-templates/test-plan-generation/) | Test scope, cases and acceptance criteria |
 
-More detail: [prompt template guide](./prompt-templates/README.md). \
-Why this approach works: [How I Turn Ideas Into Products With AI Prompts](https://promptquick.ai/blog/turn-ideas-into-products-with-ai).
+**How to use them:** open a prompt, fill in the bracketed placeholders, paste it into any AI chat and answer its questions. Start at any step; each folder's guide says what to bring. New here? Start with the [PRD prompt](./prompt-templates/prd-generation/prd-generation.md).
 
-## Coding assistant configs
+More: the [prompt template guide](./prompt-templates/README.md), and why this approach works: [How I Turn Ideas Into Products With AI Prompts](https://promptquick.ai/blog/turn-ideas-into-products-with-ai).
 
-Rules and settings for Claude Code. Merge them into your own setup instead of replacing it.
+## AI App Starter
+
+The [AI App Starter](./starters/nextjs-supabase-vercel/) turns your AI coding agent into a guide that builds a Next.js, Supabase and Vercel app with you, from idea to launch. You don't need to know the process: it leads, and you answer in plain words.
+
+**1.** Open your agent in a new, empty folder.
+
+| You use | How |
+| --- | --- |
+| Claude Code, desktop app | In the Code tab, start a new session and choose the folder. |
+| Claude Code, terminal | Run `claude` in the folder. |
+| Codex | Run `codex` in the folder. When it asks to use the network for the download, approve it. |
+
+**2.** Paste this:
+
+```text
+Set up this folder with the AI App Starter: clone https://github.com/TechNomadCode/AI-Product-Development-Toolkit with git clone --depth 1 into a temporary folder, then follow starters/nextjs-supabase-vercel/SETUP.md from it.
+```
+
+**3.** Just talk to it. Ask **what's next?**, then say **continue** or **do X instead**. Already made a PRD or MVP scope with the planning prompts? It asks for them and skips those interviews.
+
+### What it fixes
+
+**Safe by design**
+
+| The usual problem | With the starter |
+| --- | --- |
+| The agent could break production or leak keys | It works only on your computer, with a local database and stand-in payment and email services. It never holds keys, not even test keys. Pushing and deploying are blocked. |
+| Getting stuck on deploy steps | It does every local step and hands you one command or a few clicks for the rest. |
+| Risky code checked by the agent that wrote it | Payment and permission work gets an independent review, ideally by a second agent. |
+
+**Organized from day one**
+
+| The usual problem | With the starter |
+| --- | --- |
+| Late surprises force a rewrite or a new setup | The choices that shape the code come first. Separate local, staging and production environments exist from day one. |
+| A flood of questions up front | It reads what you already wrote and asks only what the next piece of work needs. The rest waits until it matters. |
+| Docs and plans scattered everywhere | One plan, one decisions file, one list of known issues. Nothing else. |
+| New ideas derail the work in progress | A new feature goes into the plan, and it asks: now, or after the current piece? |
+| Losing track between sessions | The plan records where you are. It suggests a fresh session at natural stopping points and picks up where it left off. |
+
+**Honest about what's real**
+
+| The usual problem | With the starter |
+| --- | --- |
+| The AI works from outdated knowledge | It checks current official docs before using a tool or service, and notes its source in the project. |
+| Tests pass, but the real service was never tried | It says when a test used a stand-in, and gives you the steps to try the real thing on staging. |
+| Confident answers about law, tax or pricing | It shows options with official sources and never decides these for you. |
+| Launch is an afterthought | Production, monitoring, security, search engines and privacy are checked part by part. |
+| Jargon | Plain language throughout, for non-technical owners too. |
+
+### What you need
+
+- **To start:** Node.js, Git and Docker on your computer, and your coding agent. Setup is the heaviest step: it worked at low effort in testing, but a higher effort setting gives it more room.
+- **Optional:** [Context7](https://context7.com/), a free docs tool for your agent. The agent checks current docs before using any tool or service; Context7 makes that faster and more reliable. Without it, the agent reads the official websites.
+- **Later, when the app goes online:** GitHub, Vercel and Supabase accounts. The agent tells you when. Free plans may not allow a commercial app, such as a shop; it checks the current plans for you.
+
+### Tested so far
+
+Tested with Claude Code desktop, through the first working pieces of a web shop. The automatic checks passed on GitHub on the first push. Not tested yet: Codex, the hosted staging and production setup, and launch.
+
+<details>
+<summary>How it works under the hood</summary>
+
+Setup copies this structure into your project:
+
+```text
+your-project/
+├── AGENTS.md              rules loaded every session (CLAUDE.md imports it for Claude Code)
+├── docs/plan.md           the current stage, the next action, and the pieces of work
+├── docs/decisions.md      the choices made, plus a Deferred list with due moments
+├── docs/product/          your PRD, MVP scope and UX flow
+├── KNOWN-ISSUES.md        open problems
+├── .kit/stages/           one instruction file per stage, read only while it's current
+├── .kit/modules/          payments, email and background jobs: questions, rules and tests
+├── .kit/planning/         the PRD, UX and MVP interview prompts from this toolkit
+├── .claude/settings.json  blocks pushing, deploying and hosted commands (Claude Code)
+└── .codex/rules/          the same blocks for Codex
+```
+
+- **Session loop:** the agent reads where things stand in `docs/plan.md`, loads only the current stage, does one step, saves, and updates the plan. At natural stopping points it suggests a fresh session, which picks up from the plan.
+- **Safety by design, not by promise:** no hosted credentials exist on your machine. An environment guard refuses to run against anything but the local database and stand-in services. Blocked commands are only a backstop.
+- **Rules, not recipes:** the kit states what must be true and how to check it. The agent looks up how today's tools do it and writes the chosen setup, with its sources, into the `AGENTS.md` of the folder it concerns. That folder's rules load only when the agent works there.
+- **Pipeline:** staging follows the main branch by itself. Production changes only when you start it. In both, the database is updated before the new code runs, and only the production domain can be indexed.
+- **Questions on time:** anything not needed yet goes on the Deferred list with a due moment. The agent checks that list before each stage and each piece of work.
+
+</details>
+
+## Agent configurations
+
+Working instructions for Claude Code, based on Anthropic's documentation. Merge them into your own setup instead of replacing it.
 
 | Config | What it does |
 | --- | --- |
-| [Claude Opus 5.5 rules](./agent-configs/claude-code-desktop/claude-opus-5-5/README.md) (latest) | A `CLAUDE.md` for clear scope, concise replies, and up-to-date docs lookups |
-| [Claude Opus 5 rules](./agent-configs/claude-code-desktop/claude-opus-5/README.md) | The same idea, written for Opus 5 |
-| [Permission guardrails](./agent-configs/claude-code-desktop/permission-guardrails/README.md) | An optional, strict `settings.json` that blocks risky commands. Read it before using it |
+| [Claude Opus 5.5 rules](./agent-configs/claude-code-desktop/claude-opus-5-5/README.md) (latest) | A `CLAUDE.md` for clear scope, concise replies and up-to-date docs lookups. The lookups use Context7, a free docs tool; the guide shows how to add it. |
+| [Claude Opus 5 rules](./agent-configs/claude-code-desktop/claude-opus-5/README.md) | The same idea, written for Opus 5. |
 
-More detail: [agent configuration guide](./agent-configs/README.md). \
-What changed in Opus 5.5: [What Anthropic Says Has Improved in Opus 5.5](https://promptquick.ai/blog/opus-5-5-improvements-and-prompting).
+More: the [agent configuration guide](./agent-configs/README.md), and [What Anthropic Says Has Improved in Opus 5.5](https://promptquick.ai/blog/opus-5-5-improvements-and-prompting).
 
 ## Good to know
 

@@ -8,7 +8,7 @@ This is a personal configuration informed by Anthropic's documentation, not an o
 
 Anthropic's [Opus 5.5 guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5) says existing Opus 5 prompts remain a useful starting point. Its [context engineering article](https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/) already applied to Opus 5: retain useful project facts and gotchas, prune conflicting rules, and load specialist guidance when needed.
 
-Claude Code reads `CLAUDE.md` as context. It is neither a system prompt nor an enforced tool policy. Keep controls that must be enforced in [permissions](https://code.claude.com/docs/en/permissions) or appropriate [hooks](https://code.claude.com/docs/en/hooks-guide). The separate [permission guardrails guide](../permission-guardrails/README.md) is optional and requires its own review.
+Claude Code reads `CLAUDE.md` as context. It is neither a system prompt nor an enforced tool policy. Keep controls that must be enforced in [permissions](https://code.claude.com/docs/en/permissions) or appropriate [hooks](https://code.claude.com/docs/en/hooks-guide).
 
 ## How to Use
 

@@ -23,8 +23,6 @@ What makes these prompts unique is their **user-centered, guided conversational 
 *   [mvp-development-planning](./mvp-development-planning/): Template for developing detailed MVP development plans based on the concept.
 *   [ultra-lean-mvp-development-planning](./ultra-lean-mvp-development-planning/): Template for developing detailed Ultra Lean MVP development plans based on the concept
 *   [test-plan-generation](./test-plan-generation/): Template for creating thorough test plans for software quality assurance.
-*   [v0-design-prompts](./v0-design-prompts/): Templates for generating `v0.dev` prompts based on UX Specs and MVP scope.
-*   [session-continuation](./session-continuation/): Meta-prompt for distilling long chat sessions into continuation plans.
 
 ## How to Use Prompt Templates
 
@@ -37,3 +35,7 @@ What makes these prompts unique is their **user-centered, guided conversational 
 ## Model Compatibility
 
 Use a conversational model that can retain your inputs and confirmed decisions throughout the exchange. The templates are plain text, but output quality varies by model and task; review the draft before using it. The subfolder guides explain any additional setup.
+
+## When You're Ready to Build
+
+These templates work on their own, with any AI chat and any stack. To build the product with an AI coding agent, the [AI App Starter](../starters/nextjs-supabase-vercel/) sets up a Next.js, Supabase and Vercel project. It runs the PRD, UX and MVP concept templates inside your agent, or uses the documents you already made with them.

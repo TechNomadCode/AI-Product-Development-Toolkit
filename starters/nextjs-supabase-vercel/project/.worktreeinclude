@@ -1,0 +1,3 @@
+# Claude Code copies these gitignored files into every new worktree.
+# .env.local holds only local, generated values, so sharing it is safe.
+.env.local
