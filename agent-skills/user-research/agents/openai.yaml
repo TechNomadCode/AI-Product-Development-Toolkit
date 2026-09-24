@@ -1,0 +1,7 @@
+interface:
+  display_name: "User research"
+  short_description: "Plan user research and turn answers into PRD input"
+  default_prompt: "Use $user-research to plan a questionnaire for my product idea."
+
+policy:
+  allow_implicit_invocation: false

@@ -18,6 +18,8 @@ Build and launch a web app with an AI coding agent that leads the way. It can't 
 Set up this folder with the AI App Starter: clone https://github.com/TechNomadCode/AI-Product-Development-Toolkit with git clone --depth 1 into a temporary folder, then follow starters/nextjs-supabase-vercel/SETUP.md from it.
 ```
 
+Installed the toolkit's [skills](../../README.md#skills)? Run `/nextjs-supabase-vercel` instead (`$nextjs-supabase-vercel` in Codex).
+
 **3. Answer its questions.** After that, just talk to it: ask **what's next?**, then say **continue** or **do X instead**. Ask for a new feature or report a bug in your own words, and it fits the request into the plan.
 
 ## What happens

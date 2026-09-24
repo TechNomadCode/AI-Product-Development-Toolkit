@@ -16,6 +16,8 @@
 | **[AI App Starter](#ai-app-starter)** | A project your coding agent builds with you, step by step, up to launch. | You want to build and launch a web app |
 | **[Agent configurations](#agent-configurations)** | Working instructions for Claude Code. | You code with Claude Code every day |
 
+The planning prompts and the AI App Starter also install as [skills](#skills) for Claude Code and Codex, with one line.
+
 ## Planning prompts
 
 Most prompts tell the AI to write a document straight away, so it fills every gap with guesses. These prompts make it **interview you first**:
@@ -104,6 +106,30 @@ your-project/
 - **Questions on time:** anything not needed yet goes on the Deferred list with a due moment. The agent checks that list before each stage and each piece of work.
 
 </details>
+
+## Skills
+
+Use Claude Code or Codex? You can install the planning prompts and the AI App Starter as skills, then you can run each one by name.
+
+**Install:** paste this into Claude Code or Codex.
+
+```text
+Install the AI Product Development Toolkit skills: clone https://github.com/TechNomadCode/AI-Product-Development-Toolkit with git clone --depth 1 into a temporary folder, then follow agent-skills/INSTALL.md from it.
+```
+
+The agent copies seven skills into your personal skills folder, so they work in every project. To update them, paste the same line again.
+
+| Skill | Run it with | What it does |
+| --- | --- | --- |
+| User research | `/user-research` | Plans a questionnaire, then turns the responses into input for your PRD |
+| PRD | `/prd` | Interviews you, then drafts your product requirements |
+| UX and user flows | `/ux` | Maps the screens and user flows from your PRD |
+| MVP concept | `/mvp` | Picks the smallest first version worth building |
+| MVP build plan | `/mvp-plan` | Plans the build: a full plan or an ultra-lean spec |
+| Test plan | `/test-plan` | Drafts a test plan with scope and acceptance criteria |
+| AI App Starter | `/nextjs-supabase-vercel` | Sets up an empty folder with the AI App Starter |
+
+In Codex, type `$` instead of `/`, for example `$prd`. Skills run only when you call them. Each planning skill runs its [planning prompt](#planning-prompts) unchanged and fills it from what you give it.
 
 ## Agent configurations
 

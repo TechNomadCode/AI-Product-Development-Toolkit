@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI App Starter"
+  short_description: "Start a Next.js, Supabase and Vercel app"
+  default_prompt: "Use $nextjs-supabase-vercel to set up this empty folder with the AI App Starter."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PRD interview"
+  short_description: "Interview, then draft a product requirements doc"
+  default_prompt: "Use $prd to turn my notes into a product requirements document."
+
+policy:
+  allow_implicit_invocation: false

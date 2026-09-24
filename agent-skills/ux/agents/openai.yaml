@@ -1,0 +1,7 @@
+interface:
+  display_name: "UX and user flows"
+  short_description: "Map screens and user flows from your PRD"
+  default_prompt: "Use $ux to turn my PRD into screens and user flows."
+
+policy:
+  allow_implicit_invocation: false

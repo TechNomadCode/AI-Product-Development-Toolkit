@@ -1,0 +1,7 @@
+interface:
+  display_name: "MVP build plan"
+  short_description: "Plan the MVP build: a full plan or a lean spec"
+  default_prompt: "Use $mvp-plan to plan how to build my MVP."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,7 @@
+interface:
+  display_name: "MVP concept"
+  short_description: "Choose the smallest first version worth building"
+  default_prompt: "Use $mvp to define the first version of my product from my PRD."
+
+policy:
+  allow_implicit_invocation: false

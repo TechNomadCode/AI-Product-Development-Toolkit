@@ -1,0 +1,7 @@
+interface:
+  display_name: "Test plan"
+  short_description: "Draft a test plan with scope and acceptance criteria"
+  default_prompt: "Use $test-plan to draft a test plan for the features I'm building."
+
+policy:
+  allow_implicit_invocation: false
