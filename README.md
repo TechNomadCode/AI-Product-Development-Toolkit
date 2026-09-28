@@ -137,7 +137,8 @@ Working instructions for Claude Code, based on Anthropic's documentation. Merge 
 
 | Config | What it does |
 | --- | --- |
-| [Claude Opus 5.5 rules](./agent-configs/claude-code-desktop/claude-opus-5-5/README.md) (latest) | A `CLAUDE.md` for clear scope, concise replies and up-to-date docs lookups. The lookups use Context7, a free docs tool; the guide shows how to add it. |
+| [Claude Sonnet 5.5 rules](./agent-configs/claude-code-desktop/claude-sonnet-5-5/README.md) (latest) | The Opus 5.5 file plus three short additions: no unrequested extras, stop after giving a plan, and run a real check before saying done. |
+| [Claude Opus 5.5 rules](./agent-configs/claude-code-desktop/claude-opus-5-5/README.md) | A `CLAUDE.md` for clear scope, concise replies and up-to-date docs lookups. The lookups use Context7, a free docs tool; the guide shows how to add it. |
 | [Claude Opus 5 rules](./agent-configs/claude-code-desktop/claude-opus-5/README.md) | The same idea, written for Opus 5. |
 
 More: the [agent configuration guide](./agent-configs/README.md), and [What Anthropic Says Has Improved in Opus 5.5](https://promptquick.ai/blog/opus-5-5-improvements-and-prompting).
