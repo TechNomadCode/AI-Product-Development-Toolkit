@@ -6,7 +6,8 @@ Reusable working instructions for AI coding agents. Merge them into your own set
 
 | Configuration | Purpose |
 | --- | --- |
-| [Claude Opus 5.5 instructions](./claude-code-desktop/claude-opus-5-5/) | Latest model-specific `CLAUDE.md`: the Opus 5 conventions and Context7 guidance with fewer repeated or rigid rules, plus effort-level notes. |
+| [Claude Sonnet 5.5 instructions](./claude-code-desktop/claude-sonnet-5-5/) | Latest model-specific `CLAUDE.md`: the Opus 5.5 file plus three short additions for behavior Anthropic's Sonnet 5.5 guide describes, and effort notes. |
+| [Claude Opus 5.5 instructions](./claude-code-desktop/claude-opus-5-5/) | Model-specific `CLAUDE.md`: the Opus 5 conventions and Context7 guidance with fewer repeated or rigid rules, plus effort-level notes. |
 | [Claude Opus 5 instructions](./claude-code-desktop/claude-opus-5/) | Model-specific `CLAUDE.md` with working conventions and Context7 guidance. |
 
 ## Where the file goes
