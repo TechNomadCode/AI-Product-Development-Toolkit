@@ -140,6 +140,10 @@ In Codex, type `$` instead of `/`, for example `$prd`. Skills run only when you 
 
 The video skill needs Node.js. It also makes its sound in code, usually with Python, so have Python installed too. It installs Remotion itself, once you approve its plan.
 
+**Demo:** a video for [promptquick.ai](https://promptquick.ai), made with the process behind `/remotion-video`. Sound on.
+
+https://github.com/user-attachments/assets/674cb631-cde3-4cf4-bd6b-047d3bb3f5a0
+
 ## Agent configurations
 
 Working instructions for Claude Code, based on Anthropic's documentation. Merge them into your own setup instead of replacing it.
