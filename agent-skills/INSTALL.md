@@ -11,7 +11,7 @@ The owner asked you to install this toolkit's skills, and you cloned this reposi
 
    On Windows, `~` is the user's home folder. Create the folder if it doesn't exist. If the owner asks for both tools, install into both folders.
 
-2. **Copy each skill.** For each row below, copy the folder `agent-skills/<skill>/` from the clone to `<skills folder>/<skill>/`, including its `agents/` folder. Then copy the listed prompt files from the clone's `prompt-templates/` into that same installed folder, next to its `SKILL.md`.
+2. **Copy each skill.** If the owner named specific skills, install only those. For each row below, copy the folder `agent-skills/<skill>/` from the clone to `<skills folder>/<skill>/`, including its `agents/` folder. Then copy the listed prompt files from the clone's `prompt-templates/` into that same installed folder, next to its `SKILL.md`.
 
    | Skill | Prompt files to copy in |
    | --- | --- |
@@ -22,6 +22,7 @@ The owner asked you to install this toolkit's skills, and you cloned this reposi
    | `mvp-plan` | `mvp-development-planning/Guided-MVP.md`, `ultra-lean-mvp-development-planning/Guided-Ultra-Lean-MVP.md` |
    | `test-plan` | `test-plan-generation/Guided-Test-Plan.md` |
    | `nextjs-supabase-vercel` | none |
+   | `remotion-video` | none |
 
 3. **Don't overwrite the owner's own skills.** If `<skills folder>/<skill>/` already exists, look at its `SKILL.md`. If it contains the line `From the AI Product Development Toolkit`, it's an earlier install: replace the whole folder. Otherwise it's the owner's own skill with the same name: leave it untouched, skip that skill, and tell the owner.
 

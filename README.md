@@ -16,7 +16,7 @@
 | **[AI App Starter](#ai-app-starter)** | A project your coding agent builds with you, step by step, up to launch. | You want to build and launch a web app |
 | **[Agent configurations](#agent-configurations)** | Working instructions for Claude Code. | You code with Claude Code every day |
 
-The planning prompts and the AI App Starter also install as [skills](#skills) for Claude Code and Codex, with one line.
+The planning prompts and the AI App Starter also install as [skills](#skills) for Claude Code and Codex, with one line, together with a skill that makes short product videos in code.
 
 ## Planning prompts
 
@@ -109,7 +109,7 @@ your-project/
 
 ## Skills
 
-Use Claude Code or Codex? You can install the planning prompts and the AI App Starter as skills, then you can run each one by name.
+Use Claude Code or Codex? You can install the planning prompts, the AI App Starter and a video maker as skills, then you can run each one by name.
 
 **Install:** paste this into Claude Code or Codex.
 
@@ -117,7 +117,13 @@ Use Claude Code or Codex? You can install the planning prompts and the AI App St
 Install the AI Product Development Toolkit skills: clone https://github.com/TechNomadCode/AI-Product-Development-Toolkit with git clone --depth 1 into a temporary folder, then follow agent-skills/INSTALL.md from it.
 ```
 
-The agent copies seven skills into your personal skills folder, so they work in every project. To update them, paste the same line again.
+The agent copies eight skills into your personal skills folder, so they work in every project. To update them, paste the same line again.
+
+**Install only some skills:** add their names from the table below to the end of the same line, for example:
+
+```text
+Install the AI Product Development Toolkit skills: clone https://github.com/TechNomadCode/AI-Product-Development-Toolkit with git clone --depth 1 into a temporary folder, then follow agent-skills/INSTALL.md from it. Install only these skills: prd, remotion-video
+```
 
 | Skill | Run it with | What it does |
 | --- | --- | --- |
@@ -128,8 +134,11 @@ The agent copies seven skills into your personal skills folder, so they work in 
 | MVP build plan | `/mvp-plan` | Plans the build: a full plan or an ultra-lean spec |
 | Test plan | `/test-plan` | Drafts a test plan with scope and acceptance criteria |
 | AI App Starter | `/nextjs-supabase-vercel` | Sets up an empty folder with the AI App Starter |
+| Video | `/remotion-video` | Makes a short video about your product in code (Remotion), after you approve the idea and a storyboard |
 
 In Codex, type `$` instead of `/`, for example `$prd`. Skills run only when you call them. Each planning skill runs its [planning prompt](#planning-prompts) unchanged and fills it from what you give it.
+
+The video skill needs Node.js. It also makes its sound in code, usually with Python, so have Python installed too. It installs Remotion itself, once you approve its plan.
 
 ## Agent configurations
 

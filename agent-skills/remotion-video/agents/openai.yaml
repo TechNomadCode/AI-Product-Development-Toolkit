@@ -1,0 +1,7 @@
+interface:
+  display_name: "Video"
+  short_description: "Make a short product video in code"
+  default_prompt: "Use $remotion-video to make a short video about my product."
+
+policy:
+  allow_implicit_invocation: false
