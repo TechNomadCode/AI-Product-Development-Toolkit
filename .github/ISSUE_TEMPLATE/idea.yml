@@ -1,0 +1,37 @@
+name: Suggest an improvement
+description: An idea for a prompt, a skill, the AI App Starter or the docs.
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part?
+      options:
+        - "User research (prompt or /user-research)"
+        - "PRD (prompt or /prd)"
+        - "UX and user flow (prompt or /ux)"
+        - "MVP scope (prompt or /mvp-scope)"
+        - "MVP build plan, full or ultra-lean (prompt or /mvp-plan)"
+        - "Test plan (prompt or /test-plan)"
+        - "AI App Starter"
+        - "Video skill (/remotion-video)"
+        - "Installing the skills"
+        - "Agent configurations (CLAUDE.md)"
+        - "README or other docs"
+        - "Something new"
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: The change, and the problem it solves for you.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Links, examples or alternatives you've considered. Remove anything private.
+    validations:
+      required: false

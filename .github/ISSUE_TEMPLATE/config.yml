@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question
+    url: https://github.com/TechNomadCode/AI-Product-Development-Toolkit/discussions
+    about: Questions about using the prompts, the skills or the AI App Starter.

@@ -1,6 +1,6 @@
 ---
 name: mvp-plan
-description: Plan the MVP build from a PRD and an MVP concept, as a full development plan or an ultra-lean build spec, with the AI Product Development Toolkit's planning prompts.
+description: Plan the MVP build from a PRD and an MVP scope, as a full development plan or an ultra-lean build spec, with the AI Product Development Toolkit's planning prompts.
 disable-model-invocation: true
 ---
 
@@ -8,8 +8,8 @@ disable-model-invocation: true
 
 This skill has two prompts in its folder. Unless the owner's message makes it clear, ask which one they need:
 
-- `Guided-MVP.md`: a full development plan, with scope, tech stack, phases, testing and success metrics.
-- `Guided-Ultra-Lean-MVP.md`: a short build spec for a fast first version, with purpose, user, features and tech choices.
+- `mvp-plan.md`: a full development plan, with scope, tech stack, phases, testing and success metrics.
+- `mvp-plan-lean.md`: a short build spec for a fast first version, with purpose, user, features and tech choices.
 
 If a file is missing, tell the owner to install the skills again. Then run the prompt:
 

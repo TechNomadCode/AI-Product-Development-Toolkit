@@ -74,7 +74,7 @@ Either way the agent can't reach production: the project never holds hosted cred
 
 1. Download this repository as a ZIP (**Code → Download ZIP**) and unzip it.
 2. Copy everything inside `starters/nextjs-supabase-vercel/project/` into your empty folder, including hidden files and folders.
-3. Copy `prd-generation.md`, `Guided-UX-User-Flow.md` and `Guided-MVP-Concept-Definition.md` from `prompt-templates/` into your folder's `.kit/planning/`.
+3. Copy `prd.md`, `ux.md` and `mvp-scope.md` from `planning-prompts/` (folders `2-prd`, `3-ux` and `4-mvp-scope`) into your folder's `.kit/planning/`.
 4. Open your agent in the folder and ask **what's next?**
 
 </details>
@@ -82,13 +82,29 @@ Either way the agent can't reach production: the project never holds hosted cred
 <details>
 <summary>How it works</summary>
 
-- **The agent can't reach production.** You develop against a local database with stand-in payment and email services. Staging and production change only through CI or through you, and their credentials never sit on your computer.
-- **Database changes before code.** Staging follows your main branch by itself, and production changes only when you start it. In both, the database is updated before the new code runs.
-- **Each question when it matters.** Choices that shape the code are settled before any code. Everything else sits under *Deferred* in `docs/decisions.md` with a due moment.
-- **Rules, not recipes.** The kit says what must be true and how to check it. The agent looks up how today's tools do it and writes the chosen setup, with its sources, into the folder it concerns.
+Setup copies this structure into your project:
+
+```text
+your-project/
+├── AGENTS.md              rules loaded every session (CLAUDE.md imports it for Claude Code)
+├── docs/plan.md           the current stage, the next action, and the pieces of work
+├── docs/decisions.md      the choices made, plus a Deferred list with due moments
+├── docs/product/          your PRD, MVP scope and UX flow
+├── KNOWN-ISSUES.md        open problems
+├── .kit/stages/           one instruction file per stage, read only while it's current
+├── .kit/modules/          payments, email and background jobs: questions, rules and tests
+├── .kit/planning/         the PRD, UX and MVP interview prompts from this toolkit
+├── .claude/settings.json  blocks pushing, deploying and hosted commands (Claude Code)
+└── .codex/rules/          the same blocks for Codex
+```
+
+- **The agent can't reach production.** You develop against a local database with stand-in payment and email services. An environment guard refuses to run against anything else. Staging and production change only through CI or through you, and their credentials never sit on your computer.
+- **Database changes before code.** Staging follows your main branch by itself, and production changes only when you start it. In both, the database is updated before the new code runs, and only the production domain can be indexed by search engines.
+- **Each question when it matters.** Choices that shape the code are settled before any code. Everything else sits under *Deferred* in `docs/decisions.md` with a due moment. The agent checks that list before each stage and each piece of work.
+- **Rules, not recipes.** The kit says what must be true and how to check it. The agent looks up how today's tools do it and writes the chosen setup, with its sources, into the `AGENTS.md` of the folder it concerns.
 - **Everything has one place.** `docs/plan.md` holds the stage, where you are and the pieces of work. `docs/decisions.md` holds the choices, and `KNOWN-ISSUES.md` the open problems. Git holds the history.
-- **Only what's needed is loaded.** `AGENTS.md` loads every session. The agent reads only the current stage's file in `.kit/`, and each folder's own rules load when it works there.
+- **Only what's needed is loaded.** `AGENTS.md` loads every session. The agent reads where things stand in `docs/plan.md`, then only the current stage's file in `.kit/`, and each folder's own rules load when it works there.
 - **One piece per session.** Every piece has acceptance criteria and tests, which are never weakened to pass. Risky pieces get an independent review, then one confirmation round at most.
-- **The planning prompts are the same ones.** Stage 1 runs this toolkit's [PRD](../../prompt-templates/prd-generation/), [UX](../../prompt-templates/ux-user-flow/) and [MVP](../../prompt-templates/mvp-concept-definition/) prompts inside your agent. You can also run them in any AI chat on their own.
+- **The planning prompts are the same ones.** Stage 1 runs this toolkit's [PRD](../../planning-prompts/2-prd/), [UX](../../planning-prompts/3-ux/) and [MVP scope](../../planning-prompts/4-mvp-scope/) prompts inside your agent. You can also run them in any AI chat on their own.
 
 </details>

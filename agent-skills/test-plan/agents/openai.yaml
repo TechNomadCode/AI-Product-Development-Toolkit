@@ -1,6 +1,6 @@
 interface:
   display_name: "Test plan"
-  short_description: "Draft a test plan with scope and acceptance criteria"
+  short_description: "Draft a test plan with scope and entry and exit criteria"
   default_prompt: "Use $test-plan to draft a test plan for the features I'm building."
 
 policy:

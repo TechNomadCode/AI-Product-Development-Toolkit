@@ -111,7 +111,7 @@ Create a concise, self-contained handoff with these subsections:
 *   **Recommendations for PRD Goals** linked to evidence and labeled as recommendations.
 *   **Recommendations for PRD Requirements** linked to evidence, confidence, caveats, and affected segments.
 
-The `PRD Research Input` must preserve the boundary between observed findings, interpretations, and unsupported assumptions. It should be ready to paste into the `MY INITIAL BRAINDUMP` section of the repository's `prd-generation` prompt, where a product owner can review and confirm each proposed goal or requirement.
+The `PRD Research Input` must preserve the boundary between observed findings, interpretations, and unsupported assumptions. It should be ready to paste into the `MY INITIAL BRAINDUMP` section of the toolkit's PRD prompt (`prd.md`), where a product owner can review and confirm each proposed goal or requirement.
 
 ### 8. Traceability Check
 Confirm that every supported segment, problem, need, constraint, goal recommendation, and requirement recommendation links back to observed evidence; list any item that does not and move it to unsupported assumptions.

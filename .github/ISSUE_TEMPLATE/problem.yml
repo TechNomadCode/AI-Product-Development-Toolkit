@@ -1,0 +1,54 @@
+name: Report a problem
+description: A step was unclear, or a prompt, skill or the AI App Starter didn't work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Share only small, non-sensitive examples: no private data, keys or client details.
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part?
+      options:
+        - "User research (prompt or /user-research)"
+        - "PRD (prompt or /prd)"
+        - "UX and user flow (prompt or /ux)"
+        - "MVP scope (prompt or /mvp-scope)"
+        - "MVP build plan, full or ultra-lean (prompt or /mvp-plan)"
+        - "Test plan (prompt or /test-plan)"
+        - "AI App Starter"
+        - "Video skill (/remotion-video)"
+        - "Installing the skills"
+        - "Agent configurations (CLAUDE.md)"
+        - "README or other docs"
+        - "Other"
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: AI tool and model
+      placeholder: "For example: Claude Code desktop with Opus 5.5, Codex, or an AI chat"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what the AI did, and where it went wrong or what was unclear.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: false
+  - type: textarea
+    id: example
+    attributes:
+      label: Small example
+      description: A short excerpt of the conversation or output that shows the problem. Remove anything private.
+    validations:
+      required: false

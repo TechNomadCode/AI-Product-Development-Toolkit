@@ -8,8 +8,8 @@ disable-model-invocation: true
 
 This skill has two prompts in its folder. Unless the owner's message makes it clear, ask which one they need:
 
-- `Guided-User-Research-Questionnaire.md`: design a questionnaire, before the research.
-- `Post-Research-PRD-Input.md`: turn collected responses into input for a PRD, after the research.
+- `questionnaire.md`: design a questionnaire, before the research.
+- `research-to-prd.md`: turn collected responses into input for a PRD, after the research.
 
 If a file is missing, tell the owner to install the skills again. Then run the prompt:
 

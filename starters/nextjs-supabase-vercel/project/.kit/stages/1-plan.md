@@ -16,9 +16,9 @@ Each interview uses a prompt template in `.kit/planning/`. Never run an intervie
 
 | Order | Template | Save to | When |
 | --- | --- | --- | --- |
-| 1 | `prd-generation.md` | `docs/product/prd.md` | Always |
-| 2 | `Guided-UX-User-Flow.md` | `docs/product/ux.md` | If the app has more than a few screens. Ask the owner. |
-| 3 | `Guided-MVP-Concept-Definition.md` | `docs/product/mvp.md` | Always |
+| 1 | `prd.md` | `docs/product/prd.md` | Always |
+| 2 | `ux.md` | `docs/product/ux.md` | If the app has more than a few screens. Ask the owner. |
+| 3 | `mvp-scope.md` | `docs/product/mvp.md` | Always |
 
 In the PRD template, the product type is a web application built with Next.js, Supabase and Vercel. Ask the owner for any other constraints.
 
