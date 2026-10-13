@@ -6,14 +6,14 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-D97757)
-[![Works with Codex (beta)](https://img.shields.io/badge/works%20with-Codex%20(beta)-412991)](./starters/nextjs-supabase-vercel/README.md#tested-so-far)
+[![Codex: untested](https://img.shields.io/badge/Codex-untested-lightgrey)](./starters/nextjs-supabase-vercel/README.md#tested-so-far)
 
 </div>
 
 | | What it is | Use it when |
 | --- | --- | --- |
 | **[Planning prompts](#planning-prompts)** | Guided prompts that interview you, then write your plan. Any AI chat. | You have an idea and want a solid plan |
-| **[AI App Starter](#ai-app-starter)** | A project your coding agent builds with you, step by step, up to launch. | You want to build and launch a web app |
+| **[AI App Starter](#ai-app-starter)** | Instructions your coding agent follows to build a web app with you, step by step, up to launch. | You want to build and launch a web app |
 | **[Skills](#skills)** | The planning prompts and the AI App Starter as commands, plus one that makes short product videos in code. Installed with one line. | You use Claude Code or Codex |
 | **[Agent configurations](#agent-configurations)** | Working instructions for Claude Code. | You code with Claude Code every day |
 
@@ -43,6 +43,8 @@ More: the [planning prompts guide](./planning-prompts/README.md), and why this a
 
 The [AI App Starter](./starters/nextjs-supabase-vercel/) turns your AI coding agent into a guide that builds a Next.js, Supabase and Vercel app with you, from idea to launch. You don't need to know the process: it leads, and you answer in plain words.
 
+The starter contains no code: it's stage-by-stage instructions, permission rules, and the test and CI requirements the agent follows. The agent writes the app, its tests and its checks.
+
 **1.** Open your agent in a new, empty folder.
 
 | You use | How |
@@ -61,7 +63,7 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 
 ### Why use it
 
-- **It can't break production.** It works only on your computer, with a local database and stand-in payment and email services. It never holds keys, not even test keys, and pushing and deploying are blocked.
+- **It can't touch production directly.** It works only on your computer, with a local database and stand-in payment and email services. It never holds hosted keys, not even test keys, and you push and start production deploys yourself. Its list of blocked commands is only a backstop.
 - **It leads, in plain language.** It asks only what the next piece of work needs, does every local step itself, and hands you one command or a few clicks for the rest.
 - **It stays organized.** One plan, one decisions file, one list of known issues, and new ideas go into the plan instead of derailing the work.
 

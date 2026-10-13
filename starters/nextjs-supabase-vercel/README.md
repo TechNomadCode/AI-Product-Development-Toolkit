@@ -1,6 +1,6 @@
 # AI App Starter: Next.js + Supabase + Vercel
 
-Build and launch a web app with an AI coding agent that leads the way. It can't touch production, keeps the project organized, and always tells you what's next.
+Build and launch a web app with an AI coding agent that leads the way. It never holds production keys, keeps the project organized, and always tells you what's next.
 
 ## Start
 
@@ -92,14 +92,16 @@ your-project/
 ├── docs/product/          your PRD, MVP scope and UX flow
 ├── KNOWN-ISSUES.md        open problems
 ├── .kit/stages/           one instruction file per stage, read only while it's current
-├── .kit/modules/          payments, email and background jobs: questions, rules and tests
+├── .kit/modules/          payments, email and background jobs: questions, rules and required tests
 ├── .kit/planning/         the PRD, UX and MVP interview prompts from this toolkit
-├── .claude/settings.json  blocks pushing, deploying and hosted commands (Claude Code)
-└── .codex/rules/          the same blocks for Codex
+├── .claude/settings.json  denies pushing, deploying and hosted commands (Claude Code)
+└── .codex/rules/          the same denials for Codex
 ```
 
-- **The agent can't reach production.** You develop against a local database with stand-in payment and email services. An environment guard refuses to run against anything else. Staging and production change only through CI or through you, and their credentials never sit on your computer.
-- **Database changes before code.** Staging follows your main branch by itself, and production changes only when you start it. In both, the database is updated before the new code runs, and only the production domain can be indexed by search engines.
+That's all setup copies: Markdown instructions and permission rules, no code. The agent writes the app, its tests, the environment guard and the CI checks, following the stage files.
+
+- **The agent can't reach production.** You develop against a local database with stand-in payment and email services. In stage 3 the agent builds an environment guard that refuses to run against anything else. Staging and production change only through CI or through you, and their credentials never sit on your computer.
+- **Database changes before code.** In the pipeline the agent sets up, staging follows your main branch by itself, and production changes only when you start it. In both, the database is updated before the new code runs, and only the production domain can be indexed by search engines.
 - **Each question when it matters.** Choices that shape the code are settled before any code. Everything else sits under *Deferred* in `docs/decisions.md` with a due moment. The agent checks that list before each stage and each piece of work.
 - **Rules, not recipes.** The kit says what must be true and how to check it. The agent looks up how today's tools do it and writes the chosen setup, with its sources, into the `AGENTS.md` of the folder it concerns.
 - **Everything has one place.** `docs/plan.md` holds the stage, where you are and the pieces of work. `docs/decisions.md` holds the choices, and `KNOWN-ISSUES.md` the open problems. Git holds the history.
