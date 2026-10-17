@@ -8,7 +8,7 @@ Goal: the slices in `docs/plan.md`, one per session.
 3. Build it. Run the narrow check while you work, then `verify`. Run `verify:db` after database changes and `test:e2e` after UI changes.
 4. When you need a decision you can't make, ask the owner and record the answer in `docs/decisions.md`.
 5. Problems outside the slice go into `KNOWN-ISSUES.md`, not into the slice.
-6. Commit locally. Shorten the finished slice to its title line with "done" and the commit, and update the Now block.
+6. Commit locally. Shorten the finished slice to its title line with "done" and the commit, and update the Now block. A risky slice gets "done" and the commit in its title line now, but keeps its full text until its independent review is settled, so the reviewer can check it against its acceptance criteria. Note the pending review in the Now block.
 7. Tell the owner what to review and push. If the slice is marked risky, tell them to run an independent review first (see below).
 8. If the slice uses an outside service (payments, email, sign-in, storage), propose the real check once it's on staging. Explain in plain words where the owner adds the provider's test keys for staging, what to click through on the staging site, and what a good result looks like. Look up the current steps; don't write them from memory. Say plainly that your own tests used a fake.
 
@@ -24,6 +24,8 @@ Explain to the owner in plain words why a second look helps. Ask whether they ha
 - End with one verdict: **BLOCKER** or **NO BLOCKER**.
 
 When the owner brings findings back to the building session, fix them, then suggest one confirmation review. After that, stop: anything still disputed is the owner's call, not another review round.
+
+Once the review is settled, with or without findings, shorten the slice to its title line and clear the pending review from the Now block.
 
 ## Adding a module later
 Ask the questions in the module's *Ask now* section, record the answers in `docs/decisions.md`, and put its *Later* items under *Deferred*. Give the module's folder an `AGENTS.md` with its *Rules* and a `CLAUDE.md` containing `@AGENTS.md`, then add the slices it needs.

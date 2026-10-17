@@ -69,7 +69,7 @@ Set up this folder with the AI App Starter: clone https://github.com/TechNomadCo
 
 ### What you need
 
-Node.js, Git and Docker to start, and GitHub, Vercel and Supabase accounts once the app goes online. The agent tells you when. Tested with Claude Code desktop up to the first pieces of a web shop; Codex, the hosted staging and production setup, and launch aren't tested yet.
+Node.js, Git and Docker to start, and GitHub, Vercel and Supabase accounts once the app goes online. The agent tells you when. Tested with Claude Code desktop up to the first pieces of a web shop, and on a live site with its hosted staging and production setup; Codex and launch aren't tested yet.
 
 More: the [starter guide](./starters/nextjs-supabase-vercel/) covers the five stages, what working with it is like, what's been tested, and how it works under the hood. Why I made it: [AI App Starter: A Custom Step-by-Step Process for Apps With Claude Code](https://promptquick.ai/blog/ai-app-starter-nextjs-supabase-vercel).
 

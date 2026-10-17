@@ -1,0 +1,20 @@
+# Keep LF line endings in the repository and the working tree on every OS,
+# so generated files (database types and the like) compare byte for byte
+# and the drift checks pass on Windows too.
+* text=auto eol=lf
+
+# Git guesses which files are binary; name the common ones so a wrong
+# guess can never rewrite their bytes.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.mp4 binary
+*.webm binary

@@ -29,7 +29,7 @@ Installed the toolkit's [skills](../../README.md#skills)? Run `/nextjs-supabase-
 | 1. Plan | Asks for any PRD, scope or notes you already have and uses them. It interviews you only to fill the gaps, using this toolkit's planning prompts. | Answer questions |
 | 2. Decide | Settles only what the first build needs: who uses the app, what it stores, languages, and which services. Your documents usually answer most of it. | Answer a few questions |
 | 3. Set up | Builds the first real feature end to end, with tests, automatic checks on GitHub, and a staging and production pipeline. Then it asks about your accounts and writes your setup steps. | Create accounts, follow its steps, push |
-| 4. Build | Builds one piece of the app per session, with tests. Payment and permission work gets an independent review first. | Review and push |
+| 4. Build | Builds one piece of the app per session, with tests. Work on sign-in and permissions, payments, database changes or live data gets an independent review first. | Review and push |
 | 5. Launch | Prepares production, monitoring, security, search engines, privacy pages and the cutover, one part at a time. | Do the hosted steps |
 
 **What it's like to work with:**
@@ -51,7 +51,8 @@ Installed the toolkit's [skills](../../README.md#skills)? Run `/nextjs-supabase-
 
 ## Tested so far
 - **Tested:** Claude Code desktop, from setup through planning, decisions, the first feature, and the first pieces of a shop (catalogue, photos, cart). The automatic checks passed on GitHub on the first push.
-- **Not tested yet:** Codex, the hosted staging and production pipeline, and the launch stage.
+- **Tested on a live site:** [promptquick.ai](https://promptquick.ai) has run on the starter since September 2026, including the hosted staging and production pipeline. That site was already live, so it skipped the launch stage.
+- **Not tested yet:** Codex, and the launch stage.
 
 Found a problem? [Open an issue](https://github.com/TechNomadCode/AI-Product-Development-Toolkit/issues).
 
@@ -95,7 +96,8 @@ your-project/
 ├── .kit/modules/          payments, email and background jobs: questions, rules and required tests
 ├── .kit/planning/         the PRD, UX and MVP interview prompts from this toolkit
 ├── .claude/settings.json  denies pushing, deploying and hosted commands (Claude Code)
-└── .codex/rules/          the same denials for Codex
+├── .codex/rules/          the same denials for Codex
+└── .gitattributes         the same line endings on every OS, so checks pass on Windows too
 ```
 
 That's all setup copies: Markdown instructions and permission rules, no code. The agent writes the app, its tests, the environment guard and the CI checks, following the stage files.

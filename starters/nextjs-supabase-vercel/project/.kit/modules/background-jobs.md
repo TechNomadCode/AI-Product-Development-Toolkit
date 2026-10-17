@@ -17,6 +17,7 @@ Use this module when work must happen after a request finishes and must not get 
 6. A replay command runs dead jobs again and records the reason. Unresolved jobs are never replayed blindly.
 7. Alert when jobs are overdue or the scheduler has stopped. An empty queue doesn't prove the scheduler runs.
 8. Don't rely on framework features that run work after the response is sent for anything that must not get lost.
+9. The scheduler's own history stays small. If it records every run, delete old records on a schedule; otherwise a run every minute can add hundreds of megabytes a year, close to a free database plan's limit.
 
 ## Tests
 - **Integration:** concurrent workers claim different jobs; an expired lease is claimed again; the retry limit leads to dead; a replay runs exactly once.

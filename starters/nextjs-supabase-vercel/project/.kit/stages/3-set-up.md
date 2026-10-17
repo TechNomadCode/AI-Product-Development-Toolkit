@@ -90,7 +90,7 @@ Prepare it; don't run it. These must be true:
 6. No tool can copy hosted credentials to the development machine, such as an environment-variable sync.
 7. Only the production domain can be indexed. Every other address, including staging and the host's default addresses, sends `noindex`.
 
-Find the current way to achieve each of these in the Vercel, GitHub and Supabase docs. Write the chosen setup and its sources into `.github/workflows/AGENTS.md`, next to a `CLAUDE.md` containing `@AGENTS.md`. Write the owner's setup steps (accounts, connections, settings, secrets by name) into `README.md`. The workflows' structure must show rule 3: the deploy step can't run unless the migration step succeeded.
+Find the current way to achieve each of these in the Vercel, GitHub and Supabase docs. Write the chosen setup and its sources into `.github/workflows/AGENTS.md`, next to a `CLAUDE.md` containing `@AGENTS.md`. Write the owner's setup steps (accounts, connections, settings, secrets by name) into `README.md`, click by click and in an order that works: anything a step picks, such as a branch, exists before that step. For every setting and secret, name the site and the exact place, such as which GitHub or Vercel environment. Say when a change takes effect only after a redeploy. The workflows' structure must show rule 3: the deploy step can't run unless the migration step succeeded.
 
 ## 10. Agent tool files
 These are already in the project. Check they still fit:
@@ -104,7 +104,7 @@ These are already in the project. Check they still fit:
 - [ ] The walking-skeleton feature works through schema, migration, types, grants, server code and UI, and has a test in each layer.
 - [ ] Tests show the guard refusing a hosted database address and a real adapter.
 - [ ] The CI workflow and the staging and production workflows exist and meet the rules in section 9, and `README.md` lists the owner's setup steps.
-- [ ] `AGENTS.md` stays under about 80 lines, and every folder with rules has its `AGENTS.md` and `CLAUDE.md`.
+- [ ] `AGENTS.md` stays under about 100 lines, not counting blocks that tools add by themselves, and every folder with rules has its `AGENTS.md` and `CLAUDE.md`.
 - [ ] Everything is committed locally. Nothing is pushed.
 
 Then ask the *Deferred* items due now (the repository and the accounts), check the current plan limits in the providers' official pages, and set the Now block to **4 of 5 · Build**, with the owner's next steps under *Waiting on the owner*:

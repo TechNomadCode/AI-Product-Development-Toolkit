@@ -3,7 +3,7 @@
 The owner asked you to set up a new project with the AI App Starter, and you cloned this repository into a temporary folder. Work in the folder where your session started: that's the project folder, not the clone.
 
 1. **Check the project folder.** It must be empty, or contain only `.git`. If anything else is there, list it and ask the owner before you continue. Never overwrite their files.
-2. **Copy the starter.** Copy everything inside `starters/nextjs-supabase-vercel/project/` from the clone into the project folder. Include hidden files and folders: `.claude`, `.codex`, `.kit` and `.worktreeinclude`.
+2. **Copy the starter.** Copy everything inside `starters/nextjs-supabase-vercel/project/` from the clone into the project folder. Include hidden files and folders: `.claude`, `.codex`, `.kit`, `.gitattributes` and `.worktreeinclude`.
 3. **Copy the planning prompts.** Copy these files from the clone's `planning-prompts/` into the project's `.kit/planning/`:
    - `2-prd/prd.md`
    - `3-ux/ux.md`
